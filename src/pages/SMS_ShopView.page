@@ -1,0 +1,127 @@
+<apex:page id="shopview" standardController="SMS_Shop__c" extensions="SMS_PopUpWindow,SMS_ShopMessaging">
+    <apex:stylesheet value="{!$Resource.SMS_View}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js')}"/>
+    <apex:includeScript
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
+    <apex:stylesheet
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
+
+    <apex:pageBlock id="shopBlock" title="{!SMS_Shop__c.Previous_Name__c}">
+        <apex:form id="shopForm">
+            <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2" id="bInfo">
+
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="{!$Label.Name}"/>
+                    <apex:outputField value="{!SMS_Shop__c.Previous_Name__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="{!$Label.Email}"/>
+                    <apex:outputField value="{!SMS_Shop__c.Email__c}">
+                        <button id="copyButton" style="border:none; background-color: darkgray;"
+                                onclick="copyToClipboard('{!SMS_Shop__c.Email__c}'); return false;">
+                            Copy
+                        </button>
+                    </apex:outputField>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem/>
+                <apex:outputField value="{!SMS_Shop__c.Phone__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="{!$Label.Address}" id="address" columns="2">
+                <apex:outputField value="{!SMS_Shop__c.Country__c}"/>
+                <apex:outputField value="{!SMS_Shop__c.City__c}"/>
+                <apex:outputField value="{!SMS_Shop__c.Street__c}"/>
+                <apex:outputField value="{!SMS_Shop__c.House_Number__c}"/>
+            </apex:pageBlockSection>
+
+
+            <apex:outputPanel id="PopUpWindow">
+                <apex:outputPanel styleClass="popupBg" layout="block" rendered="{!displayPopup}"/>
+                <apex:outputPanel styleClass="popupBlock" layout="block" rendered="{!displayPopup}">
+                    <span>Do you really want to <b>delete</b> this shop?</span>
+                    <div id="popupButtons" styleClass="popupButtons">
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Accept}" action="{!delete}"/>
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}" action="{!closePopup}"
+                                            rerender="PopUpWindow"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:form>
+        <apex:pageBlockSection id="relatedLists" columns="2">
+            <apex:relatedList list="Supplies__r"/>
+            <apex:relatedList subject="{!SMS_Shop__c}" list="Histories"/>
+        </apex:pageBlockSection>
+        <apex:form>
+            <div id="button-group" align="center">
+                <apex:commandButton value="{!$Label.Edit}" action="{!edit}"/>
+                <apex:commandButton value="{!$Label.Send} Email" onClick="return false;"
+                                    onclick="showDialog('{!$Label.Send} Email: {!SMS_Shop__c.Previous_Name__c}'); return false;"/>
+                <apex:commandButton value="{!$Label.Delete}" action="{!showPopup}" rerender="PopUpWindow"/>
+
+            </div>
+        </apex:form>
+
+        <div id="email" style="overflow: visible;">
+            <div style="float:left; ">
+                <apex:form id="mailForm">
+                    <apex:pageBlockSection id="mailer">
+                        <apex:pageBlockSectionItem>
+                            <apex:outputLabel value="{!$Label.Email}"/>
+                            <apex:outputField value="{!SMS_Shop__c.Email__c}"/>
+                        </apex:pageBlockSectionItem>
+                        <br/>
+                        <apex:pageBlockSectionItem>
+                            <apex:outputLabel style="margin-right: 15px;" value="Subject"/>
+                            <apex:inputText value="{!subject}"></apex:inputText>
+                        </apex:pageBlockSectionItem>
+                        <br/>
+                        <div style="margin: 15px; position: relative;">
+                            <apex:pageBlockSectionItem>
+                                <apex:outputLabel value="Body" style="position: absolute; top: 50px;"/>
+                                <apex:inputTextarea value="{!body}"
+                                                    style=" width: 200px; height: 100px;"></apex:inputTextarea>
+                            </apex:pageBlockSectionItem>
+                        </div>
+                    </apex:pageBlockSection>
+                    <apex:pageMessages/>
+
+                    <div align="center" id="mailButtons">
+                        <apex:commandButton action="{!sendMessage}" reRender="mailForm" value="{!$Label.Send} Email"/>
+                        <apex:commandButton value="{!$Label.Cancel}" action="{!clear}" onClick="closeDialog()"
+                                            reRender="mailForm"/>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+    </apex:pageBlock>
+
+    <script>
+    $j = jQuery.noConflict();
+    $j(document).ready(function() {
+    $j("#email").dialog({ autoOpen: false, modal: true, position: 'center'  });
+   });
+
+
+   function showDialog(name){
+      $j("#email").dialog("open");
+      $j('#email').dialog("option" , "title" , name);
+      $j('#email').dialog('option', 'position', 'center');
+      return false;
+   }
+
+function closeDialog(){
+    $j("#email").dialog("close");
+    return false;
+    }
+    </script>
+    <script language="JavaScript">
+    function copyToClipboard(inputValue) {
+              document.getElementById("copyButton").innerHTML = 'Copied';
+              var input = document.createElement("input");
+              input.setAttribute("value", inputValue);
+              document.body.appendChild(input);
+              input.select();
+              document.execCommand("copy");
+              document.body.removeChild(input);
+    }
+    </script>
+</apex:page>

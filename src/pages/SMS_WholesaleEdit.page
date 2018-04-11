@@ -1,0 +1,30 @@
+<!--
+ - Created by BRITENET on 09.04.2018.
+ -->
+
+<apex:page id="wholesaleEdit" standardController="SMS_Wholesale__c">
+    <apex:form id="wholesaleForm">
+        <apex:pageMessages />
+        <apex:pageBlock id="wholesaleBlock" title="{!$Label.Edit} {!SMS_Wholesale__c.Name}">
+            <apex:pageBlockSection id="bInfo" title="{!$Label.Basic_Info}" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$Label.Name}"/>
+                    <apex:inputField value="{!SMS_Wholesale__c.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!SMS_Wholesale__c.Email__c}"/>
+                <apex:pageBlockSectionItem />
+                <apex:inputField value="{!SMS_Wholesale__c.Phone__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="address" title="{!$Label.Address}" columns="2">
+                <apex:inputField value="{!SMS_Wholesale__c.Country__c}"/>
+                <apex:inputField value="{!SMS_Wholesale__c.City__c}"/>
+                <apex:inputField value="{!SMS_Wholesale__c.Street__c}"/>
+                <apex:inputField value="{!SMS_Wholesale__c.House_Number__c}"/>
+            </apex:pageBlockSection>
+            <div id="button-group" align="center">
+                <apex:commandButton value="{!$Label.Save}"  action="{!save}"/>
+                <apex:commandButton value="{!$Label.Cancel}"  action="{!cancel}"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

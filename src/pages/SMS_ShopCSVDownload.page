@@ -1,0 +1,7 @@
+<!--
+ - Created by BRITENET on 11.04.2018.
+ -->
+
+<apex:page id="SMS_ShopCSVDownload" standardController="SMS_Shop__c" extensions="SMS_ShopSearchController" contentType="text/csv#shops.csv">
+    <apex:outputText value="{!s}" escape="false" />
+</apex:page>

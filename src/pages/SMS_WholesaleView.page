@@ -1,0 +1,49 @@
+<!--
+ - Created by BRITENET on 09.04.2018.
+ -->
+
+<apex:page id="wholesaleview" standardController="SMS_Wholesale__c" extensions="SMS_PopUpWindow">
+    <apex:stylesheet value="{!$Resource.SMS_View}" />
+    <apex:pageBlock id="wholesaleBlock" title="{!SMS_Wholesale__c.Name}">
+        <apex:pageMessages />
+        <apex:form id="wholesaleForm">
+            <apex:pageBlockSection id="bInfo" title="Basic Info" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name"/>
+                    <apex:outputField value="{!SMS_Wholesale__c.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputField value="{!SMS_Wholesale__c.Email__c}"/>
+                <apex:pageBlockSectionItem />
+                <apex:outputField value="{!SMS_Wholesale__c.Phone__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Address" id="address" columns="2">
+                <apex:outputField value="{!SMS_Wholesale__c.Country__c}"/>
+                <apex:outputField value="{!SMS_Wholesale__c.City__c}"/>
+                <apex:outputField value="{!SMS_Wholesale__c.Street__c}"/>
+                <apex:outputField value="{!SMS_Wholesale__c.House_Number__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:outputPanel id="PopUpWindow">
+                <apex:outputPanel styleClass="popupBg" layout="block" rendered="{!displayPopup}"/>
+                <apex:outputPanel styleClass="popupBlock" layout="block" rendered="{!displayPopup}">
+                    <span>Do you really want to <b>delete</b> this wholesale?</span>
+                    <div id="popupButtons" styleClass="popupButtons">
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Accept}" action="{!delete}"/>
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}" action="{!closePopup}" rerender="PopUpWindow"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:form>
+        <apex:pageBlockSection id="relatedLists" columns="2">
+            <apex:relatedList list="Supplies__r"/>
+            <apex:relatedList subject="{!SMS_Wholesale__c}" list="Histories"/>
+        </apex:pageBlockSection>
+        <apex:form >
+            <div id="button-group" align="center">
+                <apex:commandButton value="{!$Label.Edit}" action="{!edit}"/>
+                <apex:commandButton value="{!$Label.Delete}" action="{!showPopup}" rerender="PopUpWindow"/>
+            </div>
+        </apex:form>
+    </apex:pageBlock>
+
+</apex:page>
