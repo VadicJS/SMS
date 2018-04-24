@@ -1,46 +1,73 @@
-<apex:page id="shopview" standardController="SMS_Shop__c" extensions="SMS_PopUpWindow,SMS_ShopMessaging">
+<apex:page id="shopview" standardController="SMS_Shop__c" extensions="SMS_ShopViewController">
     <apex:stylesheet value="{!$Resource.SMS_View}"/>
     <apex:includeScript value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js')}"/>
-    <apex:includeScript
-            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
-    <apex:stylesheet
-            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
-
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.iEditVF, 'iEdit.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.iEditVF, 'iEditVisualforce.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
+    <style>
+        .datePicker{
+            position: fixed;
+            z-index:10001;
+            width: 420px;
+            height:auto;
+        }
+    </style>
     <apex:pageBlock id="shopBlock" title="{!SMS_Shop__c.Previous_Name__c}">
         <apex:form id="shopForm">
-            <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2" id="bInfo">
+            <apex:pageMessages id="allMessages" rendered="{!showPageMessages}"/>
+            <table style="width:100%;" id="wrapperTable">
+                <tr>
+                    <td width="17%" style="padding-bottom: 10px;">
+                        <c:SMS_loadIcon />
+                        <input type="file" id="file" accept="image/jpeg, image/png" style="display:none;"/>
+                        <apex:image url="/servlet/servlet.FileDownload?file={!attachmentId}" width="180" height="180"
+                                    id="final" rendered="{!!showDefaultFoto}"/>
+                        <apex:image url="{!URLFOR($Resource.SMS_Logo)}" width="180" height="180" id="default"
+                                    rendered="{!showDefaultFoto}"/>
+                        <apex:inputHidden id="valueOfImage" value="{!imageBody}"/>
 
-                <apex:pageBlockSectionItem>
-                    <apex:outputLabel value="{!$Label.Name}"/>
-                    <apex:outputField value="{!SMS_Shop__c.Previous_Name__c}"/>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem>
-                    <apex:outputLabel value="{!$Label.Email}"/>
-                    <apex:outputField value="{!SMS_Shop__c.Email__c}">
-                        <button id="copyButton" style="border:none; background-color: darkgray;"
-                                onclick="copyToClipboard('{!SMS_Shop__c.Email__c}'); return false;">
-                            Copy
-                        </button>
-                    </apex:outputField>
-                </apex:pageBlockSectionItem>
-                <apex:pageBlockSectionItem/>
-                <apex:outputField value="{!SMS_Shop__c.Phone__c}"/>
-            </apex:pageBlockSection>
-            <apex:pageBlockSection title="{!$Label.Address}" id="address" columns="2">
+                        <apex:image id="result" width="180" height="180" style="display: none;"/>
+                    </td>
+                    <td width="83%">
+                        <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2" id="bInfo">
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel value="{!$Label.Name}"/>
+                                <apex:outputField value="{!SMS_Shop__c.Previous_Name__c}"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel value="{!$Label.Email}"/>
+                                <apex:outputField value="{!SMS_Shop__c.Email__c}">
+                                    <button id="copyButton" style="border:none; background-color: darkgray;"
+                                            onclick="copyToClipboard('{!SMS_Shop__c.Email__c}'); return false;">
+                                        Copy
+                                    </button>
+                                </apex:outputField>
+                            </apex:pageBlockSectionItem>
+                            <apex:pageBlockSectionItem />
+                            <apex:outputField value="{!SMS_Shop__c.Phone__c}"/>
+                        </apex:pageBlockSection>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageBlockSection title="{!$Label.Details}" id="address" columns="2">
                 <apex:outputField value="{!SMS_Shop__c.Country__c}"/>
                 <apex:outputField value="{!SMS_Shop__c.City__c}"/>
                 <apex:outputField value="{!SMS_Shop__c.Street__c}"/>
                 <apex:outputField value="{!SMS_Shop__c.House_Number__c}"/>
+                <apex:outputField value="{!SMS_Shop__c.Size_of_Shop__c}"/>
+                <apex:outputField value="{!SMS_Shop__c.LicenseNo__c}" rendered="{!IsLicenseNoEnabled}"/>
+                <apex:pageBlockSectionItem />
+                <apex:outputField value="{!SMS_Shop__c.Cash_Desk_no__c}"/>
             </apex:pageBlockSection>
-
-
             <apex:outputPanel id="PopUpWindow">
                 <apex:outputPanel styleClass="popupBg" layout="block" rendered="{!displayPopup}"/>
                 <apex:outputPanel styleClass="popupBlock" layout="block" rendered="{!displayPopup}">
                     <span>Do you really want to <b>delete</b> this shop?</span>
                     <div id="popupButtons" styleClass="popupButtons">
                         <apex:commandButton styleClass="popupbtn" value="{!$Label.Accept}" action="{!delete}"/>
-                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}" action="{!closePopup}"
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}"
+                                            action="{!closePopup}"
                                             rerender="PopUpWindow"/>
                     </div>
                 </apex:outputPanel>
@@ -50,78 +77,186 @@
             <apex:relatedList list="Supplies__r"/>
             <apex:relatedList subject="{!SMS_Shop__c}" list="Histories"/>
         </apex:pageBlockSection>
-        <apex:form>
+        <apex:form >
             <div id="button-group" align="center">
                 <apex:commandButton value="{!$Label.Edit}" action="{!edit}"/>
-                <apex:commandButton value="{!$Label.Send} Email" onClick="return false;"
-                                    onclick="showDialog('{!$Label.Send} Email: {!SMS_Shop__c.Previous_Name__c}'); return false;"/>
+                <apex:commandButton value="{!$Label.Send} Email" action="{!clear}"
+                                    reRender="mailForm, shopForm, mailMessage"
+                                    onClick="return false;"
+                                    onclick="showDialog('{!$Label.Send} Email: {!SMS_Shop__c.Previous_Name__c}');"/>
+                <apex:commandButton value="{!$Label.Add_Wholesale}" action="{!clearWholesaleForm}"
+                                    reRender="supplyForm, addConForm, allMessages, addWholesaleMessages"
+                                    onClick="return false;"
+                                    onclick="showDialogSupply();"/>
                 <apex:commandButton value="{!$Label.Delete}" action="{!showPopup}" rerender="PopUpWindow"/>
-
             </div>
         </apex:form>
 
         <div id="email" style="overflow: visible;">
             <div style="float:left; ">
                 <apex:form id="mailForm">
-                    <apex:pageBlockSection id="mailer">
-                        <apex:pageBlockSectionItem>
+                    <apex:pageBlockSection >
+                        <apex:pageBlockSectionItem >
                             <apex:outputLabel value="{!$Label.Email}"/>
                             <apex:outputField value="{!SMS_Shop__c.Email__c}"/>
                         </apex:pageBlockSectionItem>
                         <br/>
-                        <apex:pageBlockSectionItem>
-                            <apex:outputLabel style="margin-right: 15px;" value="Subject"/>
-                            <apex:inputText value="{!subject}"></apex:inputText>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel style="margin-right: 15px;" value="{!$Label.Subject}"/>
+                            <apex:inputText id="subject" value="{!subject}"></apex:inputText>
                         </apex:pageBlockSectionItem>
                         <br/>
                         <div style="margin: 15px; position: relative;">
-                            <apex:pageBlockSectionItem>
-                                <apex:outputLabel value="Body" style="position: absolute; top: 50px;"/>
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel value="{!$Label.Body}" style="position: absolute; top: 50px;"/>
                                 <apex:inputTextarea value="{!body}"
                                                     style=" width: 200px; height: 100px;"></apex:inputTextarea>
                             </apex:pageBlockSectionItem>
                         </div>
                     </apex:pageBlockSection>
-                    <apex:pageMessages/>
-
                     <div align="center" id="mailButtons">
-                        <apex:commandButton action="{!sendMessage}" reRender="mailForm" value="{!$Label.Send} Email"/>
-                        <apex:commandButton value="{!$Label.Cancel}" action="{!clear}" onClick="closeDialog()"
+                        <apex:commandButton action="{!sendMessage}" onComplete="closeDialog('#email',{!success})"
+                                            reRender="email, mailMessage, shopForm"
+                                            value="{!$Label.Send} Email"/>
+                        <apex:commandButton value="{!$Label.Cancel}" action="{!clear}"
+                                            onClick="closeDialog('#email', true)"
                                             reRender="mailForm"/>
                     </div>
                 </apex:form>
+                <apex:pageMessages id="mailMessage"/>
             </div>
+        </div>
+
+        <div id="newSupply" style="height: 1000px;">
+            <apex:pageBlock id="pb" title="{!$Label.Add_new_contract}">
+                <apex:pageMessages id="addWholesaleMessages"/>
+                <apex:form id="supplyForm">
+                    <apex:pageBlockSection id="wholesaleData">
+                        <apex:inputField value="{!smsWholesale.Name}"/>
+                        <apex:inputField value="{!smsWholesale.City__c}"/>
+                        <apex:pageBlockSectionItem />
+                        <apex:inputField value="{!smsWholesale.Country__c}"/>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection id="resultsSection" title="{!$Label.Search_Results}"
+                                           rendered="{!showResult}" columns="1">
+                        <apex:pageBlockTable value="{!Wholesales}" id="resultsTable" var="res">
+                            <apex:column >
+                                <apex:commandLink value="{!$Label.Select}" action="{!getId}" reRender="addConForm">
+                                    <apex:param name="selectedWholesaleId" value="{!res.Id}"/>
+                                </apex:commandLink>
+                            </apex:column>
+                            <apex:column headerValue="Name">
+                                <apex:outputField value="{!res.Name}"/>
+                            </apex:column>
+                            <apex:column headerValue="City">
+                                <apex:outputField value="{!res.City__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="Country">
+                                <apex:outputField value="{!res.Country__c}"/>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    <apex:panelGrid id="controlButtons" columns="10" rendered="{!showResult}">
+                        <apex:selectList value="{!size}" multiselect="false" size="1" onchange="refreshPageSize();">
+                            <apex:selectOptions value="{!paginationSizeOptions}"/>
+                        </apex:selectList>
+                        <apex:selectList value="{!orderBy}" multiselect="false" size="1" onchange="refreshPageSize();">
+                            <apex:selectOptions value="{!paginationOrderOptions}"/>
+                        </apex:selectList>
+                        <apex:commandButton status="loading" reRender="resultsSection,controlButtons" value="<<"
+                                            action="{!setCon.first}"
+                                            disabled="{!!setCon.hasPrevious}" title="First Page"/>
+                        <apex:commandButton status="loading" reRender="resultsSection, controlButtons" value="<"
+                                            action="{!setCon.previous}" disabled="{!!setCon.hasPrevious}"
+                                            title="Previous Page"/>
+                        <apex:commandButton status="loading" reRender="resultsSection, controlButtons" value=">"
+                                            action="{!setCon.next}"
+                                            disabled="{!!setCon.hasNext}" title="Next Page"/>
+                        <apex:commandButton status="loading" reRender="resultsSection, controlButtons" value=">>"
+                                            action="{!setCon.last}"
+                                            disabled="{!!setCon.hasNext}" title="Last Page"/>
+                    </apex:panelGrid>
+                    <apex:outputText rendered="{!notFound}" value="{!$Label.No_results}" id="notFound"/>
+                    <div align="center">
+                        <apex:commandButton action="{!showAll}" reRender="pb, notFound" value="{!$Label.Search}"/>
+                        <apex:commandButton action="{!clearWholesaleForm}" reRender="pb" value="{!$Label.Clear}"/>
+                        <apex:commandButton action="{!clearWholesaleForm}"
+                                            reRender="pb, addConForm, addWholesaleMessages"
+                                            value="{!$Label.Cancel}" onClick="closeDialog('#newSupply', true)"/>
+                    </div>
+                    <c:SMS_loadIcon />
+                </apex:form>
+                <apex:form id="addConForm">
+                    <apex:pageBlockSection title="{!$Label.Add_Contract}" columns="2"
+                                           id="addContract" rendered="{!showAddContract}">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.Shop}"/>
+                            <apex:outputField value="{!SMS_Shop__c.Previous_Name__c}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="{!$Label.Wholesale}"/>
+                            <apex:outputField value="{!smsWholesale.Name}"/>
+                        </apex:pageBlockSectionItem>
+                         <apex:inputField value="{!smsSupply.Contract_Start_Date__c}" required="true"/>
+                        <apex:inputField value="{!smsSupply.Contract_End_Date__c}" required="true"/>
+                    </apex:pageBlockSection>
+                    <apex:panelGrid columns="2" rendered="{!showAddContract}">
+                        <apex:commandButton action="{!insertSupplyIntoDB}"
+                                            reRender="addWholesaleMessages, allMessages, shopForm, addConForm, relatedLists"
+                                            value="{!$Label.Confirm}"
+                                            onComplete="closeDialog('#newSupply', {!success})"
+                                            status="loading"/>
+                        <apex:commandButton action="{!clearWholesaleForm}"
+                                            reRender="pb, addConForm, addWholesaleMessages"
+                                            value="{!$Label.Cancel}" onClick="closeDialog('#newSupply', true)"/>
+                    </apex:panelGrid>
+                </apex:form>
+            </apex:pageBlock>
         </div>
     </apex:pageBlock>
 
     <script>
-    $j = jQuery.noConflict();
-    $j(document).ready(function() {
-    $j("#email").dialog({ autoOpen: false, modal: true, position: 'center'  });
-   });
+        $j = jQuery.noConflict();
+        $j(document).ready(function() {
+        $j("#email").dialog({ autoOpen: false, modal: true, position: 'center'  });
+        $j("#newSupply").dialog({ autoOpen: false, modal: true, position: 'center'  });
+        $j("#logImageDialog").dialog({ autoOpen: false, modal: true, position: 'center'  });
+        $j('body .bRelatedList .bPageBlock .pbButton input.btn').hide();
+        });
 
+        function showDialog(name){
+           $j("#email").dialog("open");
+           $j('#email').dialog("option" , "title" , name);
+           $j('#email').dialog('option', 'position', 'center');
+           return false;
+        }
 
-   function showDialog(name){
-      $j("#email").dialog("open");
-      $j('#email').dialog("option" , "title" , name);
-      $j('#email').dialog('option', 'position', 'center');
-      return false;
-   }
+        function closeDialog(id, bool){
+            if(bool){
+             $j(id).dialog("close");
+             }
+             return false;
+        }
 
-function closeDialog(){
-    $j("#email").dialog("close");
-    return false;
-    }
+        function showDialogSupply(){
+           $j("#newSupply").dialog("open");
+           $j('#newSupply').dialog('option', 'position', 'top');
+           $j('.ui-dialog-titlebar-close').hide();
+           $j('#newSupply').dialog({
+               height: 500,
+               width: 600
+           });
+        };
     </script>
     <script language="JavaScript">
-    function copyToClipboard(inputValue) {
-              document.getElementById("copyButton").innerHTML = 'Copied';
-              var input = document.createElement("input");
-              input.setAttribute("value", inputValue);
-              document.body.appendChild(input);
-              input.select();
-              document.execCommand("copy");
-              document.body.removeChild(input);
-    }
+        function copyToClipboard(inputValue) {
+                  document.getElementById("copyButton").innerHTML = 'Copied';
+                  var input = document.createElement("input");
+                  input.setAttribute("value", inputValue);
+                  document.body.appendChild(input);
+                  input.select();
+                  document.execCommand("copy");
+                  document.body.removeChild(input);
+        }
     </script>
 </apex:page>

@@ -1,30 +1,157 @@
-<!--
- - Created by BRITENET on 09.04.2018.
- -->
+<apex:page id="shopEdit" standardController="SMS_Shop__c" extensions="SMS_ShopEditController">
+    <apex:stylesheet value="{!$Resource.SMS_View}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.iEditFixed)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.iEditVF, 'iEditVisualforce.js')}"/>
+    <apex:includeScript
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
+    <apex:stylesheet
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
+    <style>
+        td {
+            position: relative;
+        }
 
-<apex:page id="shopEdit" standardController="SMS_Shop__c">
-    <apex:form id="shopForm">
-        <apex:pageMessages />
-        <apex:pageBlock id="shopBlock" title="{!$Label.Edit} {!SMS_Shop__c.Previous_Name__c}">
-            <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2" id="bInfo">
-                <apex:pageBlockSectionItem >
-                    <apex:outputLabel value="Name"/>
-                    <apex:inputField value="{!SMS_Shop__c.Previous_Name__c}"/>
-                </apex:pageBlockSectionItem>
-                <apex:inputField value="{!SMS_Shop__c.Email__c}"/>
-                <apex:pageBlockSectionItem />
-                <apex:inputField value="{!SMS_Shop__c.Phone__c}"/>
-            </apex:pageBlockSection>
-            <apex:pageBlockSection title="{!$Label.Address}" id="address" columns="2">
+        [id*=panelGridImage] {
+            position: absolute;
+            top: 0px;
+            width: 97%;
+            padding-top: 80px;
+            padding-bottom: 70px;
+            opacity: 0.0;
+            transition: 0.3s;
+        }
+
+        [id*=panelGridImage]:hover {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <apex:pageBlock id="shopEditBlock">
+        <c:SMS_loadIcon/>
+        <apex:form id="shopForm">
+            <apex:pageMessages id="allMessages"/>
+            <table style="width:100%;" id="wrapperTable">
+                <tr>
+                    <td id="shopImageTd" width="17%" style="padding-bottom: 10px;">
+                        <input type="file" id="file" accept="image/jpeg, image/png" style="display:none;"/>
+                        <apex:image url="/servlet/servlet.FileDownload?file={!attachmentId}" width="180"
+                                    height="180" id="final" rendered="{!!showDefaultFoto}"/>
+                        <apex:image url="{!URLFOR($Resource.SMS_Logo)}" width="180" height="180" id="default"
+                                    rendered="{!showDefaultFoto}"/>
+                        <apex:inputHidden id="valueOfImage" value="{!imageBody}"/>
+                        <apex:panelGrid columns="2" id="panelGridImage"
+                                        style="display:flex; justify-content: center;">
+                            <apex:commandButton id="delete" value="{!$Label.Delete}" action="{!displayPopup}"
+                                                rendered="{!!showDefaultFoto}" reRender="PopUpWindow"/>
+                            <apex:commandButton id="update" value="{!$Label.Update}"/>
+                        </apex:panelGrid>
+                        <apex:image id="result" width="180" height="180" style="display: none;"/>
+                    </td>
+                    <td width="83%">
+                        <apex:pageBlockSection title="{!$Label.Basic_Info}" columns="2" id="bInfo">
+                            <apex:pageBlockSectionItem>
+                                <apex:outputLabel value="{!$Label.Name}"/>
+                                <apex:inputField value="{!SMS_Shop__c.Previous_Name__c}"/>
+                            </apex:pageBlockSectionItem>
+                            <apex:inputField value="{!SMS_Shop__c.Email__c}"/>
+                            <apex:pageBlockSectionItem/>
+                            <apex:inputField value="{!SMS_Shop__c.Phone__c}"/>
+                        </apex:pageBlockSection>
+                    </td>
+                </tr>
+            </table>
+            <apex:outputPanel id="PopUpWindow">
+                <apex:outputPanel styleClass="popupBg" layout="block" rendered="{!showPopup}"/>
+                <apex:outputPanel styleClass="popupBlock" layout="block" rendered="{!showPopup}">
+                    <span>{!$Label.Confirm_Delete_Image}</span>
+                    <div id="popupButtons" styleClass="popupButtons">
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Accept}" action="{!deleteImage}"
+                                            reRender="shopForm"/>
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}"
+                                            action="{!closePopup}"
+                                            rerender="PopUpWindow"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:panelGrid columns="3">
+                <apex:commandButton value="{!$Label.Confirm}" id="log" action="{!uploadImage}"
+                                    onComplete="return false;" style="display:none;" status="loading"/>
+                <apex:commandButton id="cancel" value="{!$Label.Cancel}" style="display:none;"/>
+            </apex:panelGrid>
+            <apex:pageBlockSection title="{!$Label.Details}" id="address" columns="2">
                 <apex:inputField value="{!SMS_Shop__c.Country__c}"/>
                 <apex:inputField value="{!SMS_Shop__c.City__c}"/>
                 <apex:inputField value="{!SMS_Shop__c.Street__c}"/>
                 <apex:inputField value="{!SMS_Shop__c.House_Number__c}"/>
+                <apex:pageBlockSectionItem/>
+                <apex:inputField value="{!SMS_Shop__c.Size_of_Shop__c}"/>
+                <apex:pageBlockSectionItem/>
+                <apex:inputField value="{!SMS_Shop__c.Cash_Desk_no__c}"/>
             </apex:pageBlockSection>
             <div id="button-group" align="center">
-                <apex:commandButton value="{!$Label.Save}"  action="{!save}"/>
-                <apex:commandButton value="{!$Label.Cancel}"  action="{!cancel}"/>
+                <apex:commandButton value="{!$Label.Save}" id="save" action="{!save}"/>
+                <apex:commandButton value="{!$Label.Cancel}" action="{!cancel}"/>
             </div>
-        </apex:pageBlock>
-    </apex:form>
+        </apex:form>
+    </apex:pageBlock>
+    <script>
+        $j = jQuery.noConflict();
+
+        $j(document).ready(function() {
+            $j("#deletePopup").dialog({ autoOpen: false, modal: true, position: 'center'  });
+        });
+
+        function openDialog(){
+           $j("#deletePopup").dialog("open");
+        }
+         function closeDialog(){
+           $j("#deletePopup").dialog("close");
+        }
+
+        $j("[id$='default'], [id$='final'], [id$='result'], [id$='update']").click(function () {
+        	$j("#file").click();
+        	return false;
+        });
+
+        $j("#file").change(function (e) {
+        	var img = e.target.files[0];
+        	if (!img.type.match('image.*')) {
+        		alert('{!$Label.Not_Image}');
+        		return;
+        	}
+        	if (this.files[0].size < 1048576) {
+        		iEdit.open(img, true, function (res) {
+        			$j("[id$='result']").attr("src", res);
+        			$j("[id$='result'], [id$='cancel']").css("display", "block");
+        			$j("[id$='default'], [id$='panelGridImage'], [id$='final']").css("display", "none");
+   	    	});
+        	} else {
+        		$j("[id$='result']").css("display", "none");
+        		this.value = '';
+        		alert('{!$Label.Image_too_big}');
+        	}
+        });
+
+        $j("[id$='save']").click(function () {
+        	var str = $j("[id$='result']").attr('src');
+        	console.log(str);
+        	$j("[id$='valueOfImage']").val(str);
+        	console.log($j("[id$='valueOfImage']").val());
+        	$j("[id$='log']").css("display", "none");
+        	$j("[id$='cancel']").css("display", "none");
+        });
+
+        $j("[id$='cancel']").click(function () {
+        	$j("[id$='result']").css("display", "none");
+        	$j("[id$='default']").css("display", "block");
+        	$j("[id$='final']").css("display", "block");
+        	$j("[id$='cancel']").css("display", "none");
+        	$j("[id$='panelGridImage']").css("display", "block");
+        	$j("[id$='result']").attr('src', '');
+        	var str = $j("[id$='result']").attr('src');
+	        $j("[id$='valueOfImage']").val(str);
+        	return false;
+        });
+    </script>
 </apex:page>

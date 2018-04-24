@@ -1,0 +1,60 @@
+<apex:page id="SMS_ShopsImportCSV" controller="SMS_ShopsImportCSVController" tabStyle="Account">
+    <apex:includeScript value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js')}"/>
+    <apex:form>
+        <c:SMS_loadIcon/>
+        <apex:pageBlock title="{!$Label.Import_Shops}">
+            <apex:pagemessages/>
+            <apex:pageBlockSection columns="4">
+                <apex:inputFile value="{!csvBlob}" filename="{!csvString}" accept=".csv" id="file"
+                                onChange="validType(this)"/>
+                <apex:commandButton value="{!$Label.Process}" action="{!process}" id="process"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="resultsTable" rendered="{!readyToImport}" columns="1"
+                                   title="{!$Label.Select_to_import}">
+                <apex:pageblocktable value="{!shopList}" var="shopInRow">
+                    <apex:column headerValue="{!$Label.Import}" id="importColumn">
+                        <apex:actionRegion>
+                            <apex:inputCheckbox value="{!shopInRow.toImport}">
+                                <apex:actionSupport event="onchange" action="{!enableImport}"
+                                                    reRender="resultsTable, importButtons"/>
+                            </apex:inputCheckbox>
+                        </apex:actionRegion>
+                    </apex:column>
+                    <apex:column value="{!shopInRow.smsShop.Previous_Name__c}"/>
+                    <apex:column value="{!shopInRow.smsShop.Email__c}"/>
+                    <apex:column headerValue="{!$Label.Status}" id="statusColumn">
+                        <apex:outputLabel value="{!shopInRow.importStatus}"/>
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.View}" rendered="{!shopInRow.showLinkToView}">
+                        <apex:outputLink
+                                value="{!'/'+shopInRow.smsShop.Id}"
+                                target="_blank"
+                                rendered="{!shopInRow.successfullyImported || shopInRow.showLinkToView}">
+                            View
+                        </apex:outputLink>
+                    </apex:column>
+                </apex:pageblocktable>
+                <apex:panelGrid id="importButtons" rendered="{!readyToImport}" columns="4" style="margin-left: 25%;">
+                    <apex:actionRegion>
+                        <apex:commandButton value="{!$Label.All}" action="{!selectAll}" reRender="resultsTable"/>
+                        <apex:commandButton value="{!$Label.None}" action="{!selectNone}" reRender="resultsTable"/>
+                        <apex:commandButton value="{!$Label.Reverse}" action="{!reverseSelect}"
+                                            reRender="resultsTable"/>
+                        <apex:commandButton value="{!$Label.Import}" action="{!importShops}" reRender="resultsTable"
+                                            status="loading" disabled="{!!enableImportButton}"/>
+                    </apex:actionRegion>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+        var regex = new RegExp("(.*?)\.(csv)$");
+        function validType(el) {
+            if (!(regex.test(el.value.toLowerCase()))) {
+                  el.value = '';
+                  alert('{!$Label.Csv_Error}');
+              }
+            }
+    </script>
+</apex:page>

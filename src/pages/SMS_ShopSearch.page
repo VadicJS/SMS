@@ -1,59 +1,67 @@
 <apex:page standardController="SMS_Shop__c" extensions="SMS_ShopSearchController" tabStyle="Account">
-    <apex:includeScript value="{!URLFOR($Resource.jQuery)}"/>
-    <apex:pageMessages id="messages"/>
-    <apex:pageBlock id="searchBlock" title="{!$Label.Search_for_Shop}">
-        <apex:form id="searchForm">
+    <c:SMS_loadIcon />
+    <apex:form style="overflow-y:auto;overflow-x:auto;margin-right: 5px;margin-left: 5px;margin-top: 3px;"
+               id="searchForm">
+        <apex:pageMessages />
+        <apex:pageBlock id="pb">
             <apex:pageBlockSection id="formSection" title="{!$Label.Search_Form}" columns="2">
-                <apex:inputField id="nameInput" value="{!smsShop.Previous_Name__c}"/>
+                <apex:inputField value="{!smsShop.Previous_Name__c}"/>
                 <apex:inputField value="{!smsShop.City__c}"/>
                 <apex:inputField value="{!smsShop.Email__c}"/>
                 <apex:inputField value="{!smsShop.Country__c}" required="true"/>
             </apex:pageBlockSection>
-            <div id="buttonsContainer" align="center">
-                <apex:commandButton action="{!getSmsShops}" value="{!$Label.Search}"
-                                    reRender="resultsSection, formCSV, nothingToShow, messages, formSection "
-                                    status="status"/>
-                <apex:commandButton action="{!clear}" value="{!$Label.Clear}"
-                                    reRender="resultsSection, resultsTable, searchForm, formCSV" status="status"/>
-                <apex:actionStatus id="status">
-                    <apex:facet name="start">
-                        <apex:image value="{!URLFOR($Resource.loader)}"
-                                    style="position: fixed; top: 100px; left: 225px; background-color: rgba(0, 30, 44, 0.2); padding: 30%; padding-left:35%;  padding-right:45%;padding-top:7%;z-index:1000"/>
-                    </apex:facet>
-                </apex:actionStatus>
+            <div id="buttons" align="center">
+                <apex:commandButton value="{!$Label.Search}" action="{!showAll}" reRender="searchForm" status="loading"/>
+                <apex:commandButton value="{!$Label.Clear} " reRender="searchForm" action="{!clear}" status="loading"/>
             </div>
-
-            <apex:commandButton value="|<" action="{!first}" disabled="{!!hasPrevious}" title="First Page"/>
-
-        </apex:form>
-        <apex:pageBlockSection title="{!$Label.Search_Results}" id="resultsSection" columns="1">
-            <apex:pageBlockTable id="resultsTable" value="{!searchResults}" var="shop" rendered="{!searchSuccessful}">
-                <apex:column headerValue="Actions">
-                    <apex:form id="commandLinks">
-                        <apex:commandLink value="{!$Label.Edit}" action="{!URLFOR($Action.SMS_Shop__c.Edit, shop.Id)}"/>
-                        /
-                        <apex:commandLink value="View" action="{!URLFOR($Action.SMS_Shop__c.View,shop.Id)}"/>
-                    </apex:form>
-                </apex:column>
-                <apex:column value="{!shop.Previous_Name__c}"/>
-                <apex:column value="{!shop.Email__c}"/>
-                <apex:column value="{!shop.Country__c}"/>
-            </apex:pageBlockTable>
-            <apex:outputText id="nothingToShow" value="No records found.."
-                             rendered="{!IF((searchSuccessful == false && showNoResults == true), true, false)}"/>
-        </apex:pageBlockSection>
-        <apex:form id="formCSV">
-            <actionRegion>
-                <div align="center">
-                    <apex:commandButton action="{!getCSVReference}" value="get CSV" rendered="{!searchSuccessful}"/>
-                </div>
-            </actionRegion>
-
-
-        </apex:form>
-        <div align="center">
-
-        </div>
-    </apex:pageBlock>
+            <apex:pageBlockSection title="{!$Label.Results}" rendered="{!showResult}" id="searchSection" columns="1">
+                <apex:pageblockTable value="{!Shops}" var="shop" id="tabId">
+                    <apex:column headerValue="{!$Label.Action}" >
+                        <apex:commandLink value="{!$Label.Edit}/" action="{!URLFOR($Action.SMS_Shop__c.Edit,shop.Id, null,true)}"/>
+                        <apex:commandLink value="{!$Label.View}" action="{!URLFOR($Action.SMS_Shop__c.View,shop.Id, null,true)}"/>
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.Original_Name}" >
+                        <apex:outputField value="{!shop.Previous_Name__c}"/>
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!ShowAll}" value="Name{!IF(sortExpression=='Previous_Name__c',IF(sortDirection='ASC','▼','▲'),'')}" reRender="searchSection">
+                                <apex:param value="Previous_Name__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.Email}">
+                        <apex:outputField value="{!shop.Email__c}"/>
+                        <apex:facet name="header">
+                            <apex:commandLink action="{!ShowAll}" value="{!$Label.Email}{!IF(sortExpression=='Email__c',IF(sortDirection='ASC','▼','▲'),'')}" reRender="searchSection">
+                                <apex:param value="Email__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="{!$Label.Country}">
+                            <apex:outputField value="{!shop.Country__c}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:panelGrid columns="10">
+                    <apex:selectList value="{!size}" multiselect="false" size="1" onchange="refreshPageSize();">
+                        <apex:selectOptions value="{!paginationSizeOptions}"/>
+                    </apex:selectList>
+                    <apex:commandButton status="loading" reRender="searchSection" value="<<" action="{!setCon.first}"
+                                        disabled="{!!setCon.hasPrevious}" title="First Page"/>
+                    <apex:commandButton status="loading" reRender="searchSection" value="<"
+                                        action="{!setCon.previous}" disabled="{!!setCon.hasPrevious}"
+                                        title="Previous Page"/>
+                    <apex:commandButton status="loading" reRender="searchSection" value=">" action="{!setCon.next}"
+                                        disabled="{!!setCon.hasNext}" title="Next Page"/>
+                    <apex:commandButton status="loading" reRender="searchSection" value=">>" action="{!setCon.last}"
+                                        disabled="{!!setCon.hasNext}" title="Last Page"/>
+                    <apex:outputText >{!(setCon.pageNumber * size)+1-size}
+                        -{!IF((setCon.pageNumber * size)>noOfRecords, noOfRecords,
+                        (setCon.pageNumber * size))} of {!noOfRecords}
+                    </apex:outputText>
+                    <apex:commandButton action="{!getCsvReference}" value="{!$Label.Download} CSV"/>
+                    <apex:commandButton action="{!getXlsReference}" value="{!$Label.Download} XLS"/>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+            <apex:outputText value="{!$Label.No_results}" rendered="{!notFound}"/>
+        </apex:pageBlock>
+    </apex:form>
 </apex:page>
-

@@ -1,0 +1,180 @@
+<apex:page standardStylesheets="false"
+           docType="html-5.0" controller="SMS_WholesalesExternalController" lightningStylesheets="true">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <apex:slds/>
+        <apex:includeScript value="{!URLFOR($Resource.jQuery)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.jQUery_Migrate)}"/>
+        <apex:includeScript
+                value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
+        <apex:stylesheet
+                value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
+        <apex:stylesheet value="{!$Resource.SMS_View}"/>
+        <apex:stylesheet
+                value="{!URLFOR($Resource.SLDS090, 'assets/styles/salesforce-lightning-design-system-vf.css')}"/>
+    </head>
+    <body>
+    <div class="slds-scope">
+        <apex:pageBlock id="resBlock">
+            <apex:form>
+                <div class="slds-form slds-form_compound" style="margin: auto; width:70%">
+                    <fieldset class="slds-form-element">
+                        <legend class="slds-form-element__label slds-text-title_caps" style="font-size: 18px; ">Search
+                            Wholesale
+                        </legend>
+                        <div class="slds-form-element__group">
+                            <div class="slds-form-element__row">
+                                <div class="slds-form-element slds-size_1-of-2">
+                                    <label class="slds-form-element__label" for="input-01">Name</label>
+                                    <apex:inputText value="{!searchParamsWholesale.Name}" styleClass="slds-input"
+                                                    required="true"/>
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-2">
+                                    <label class="slds-form-element__label" for="input-02">Email</label>
+                                    <apex:inputText value="{!searchParamsWholesale.Email}" styleClass="slds-input"/>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="slds-form-element">
+                        <div class="slds-form-element__group">
+                            <div class="slds-form-element__row">
+                                <div class="slds-form-element slds-size_1-of-2">
+                                    <label class="slds-form-element__label" for="input-01">City</label>
+                                    <apex:inputText value="{!searchParamsWholesale.City}" styleClass="slds-input"/>
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-2">
+                                    <label class="slds-form-element__label" for="input-02">Country</label>
+                                    <apex:inputText value="{!searchParamsWholesale.Country}" styleClass="slds-input"/>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="slds-col slds-no-flex slds-grid slds-align_absolute-center">
+                        <div class="slds-button-group" role="group">
+                            <apex:commandButton value="{!$Label.Search}" action="{!makeGetCallout}" reRender="resform"
+                                                styleClass="slds-button slds-button--brand slds-button--neutral slds-not-selected"/>
+                            <apex:commandButton value="{!$Label.Clear}" reRender="resform"
+                                                styleClass="slds-button slds-button--neutral slds-not-selected"/>
+                        </div>
+                    </div>
+                </div>
+            </apex:form>
+            <apex:form id="resform">
+                <apex:outputPanel rendered="{!showResults}">
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer" style="margin-top: 30px;">
+                        <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="{!$Label.Action}">{!$Label.Action}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="{!$Label.Original_name}">{!$Label.Original_name}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="{!$Label.Email}">{!$Label.Email}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="{!$Label.City}">{!$Label.City}</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="{!$Label.Country}">{!$Label.Country}</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <apex:repeat value="{!Wholesales}" var="wholesale">
+                            <tr class="slds-text-title_caps">
+                                <td data-label="{!$Label.Action}" style="width: 17%;">
+                                    <div class="slds-truncate">
+                                        <div class="slds-button-group" role="group">
+                                            <button onClick="openDialog(updateDialog); return false;"
+                                                    class="slds-button slds-button--brand">{!$Label.Update}</button>
+                                            <apex:commandButton value="{!$Label.Delete}" action="{!fetchId}" onComplete="openDialog(deleteDialog); return false;"
+                                                                styleClass="slds-button slds-button_destructive">
+                                                <apex:param name="wholesaleId" assignTo="{!fetchedId}" value="{!wholesale.Id}"/>
+                                                </apex:commandButton>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="{!$Label.Original_Name}">
+                                    <div class="slds-truncate">{!wholesale.Name}</div>
+                                </td>
+                                <td data-label="{!$Label.Email}">
+                                    <div class="slds-truncate">{!wholesale.Email}</div>
+                                </td>
+                                <td data-label="{!$Label.City}">
+                                    <div class="slds-truncate">{!wholesale.City}</div>
+                                </td>
+                                <td data-label="{!$Label.Country}">
+                                    <div class="slds-truncate">{!wholesale.Country}</div>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                        </tbody>
+                    </table>
+                </apex:outputPanel>
+
+            </apex:form>
+        </apex:pageBlock>
+        <div id="deleteDialog">
+            <apex:form>
+                <div id="confirmForm" class="slds-scope">
+                    <span style="font-size: 17px">{!$Label.Confirm_Delete_Wholesale}</span>
+                    <div class="slds-col slds-no-flex slds-grid slds-align-top"
+                         style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <apex:commandButton value="{!$Label.Delete}" action="{!deleteWholesale}" onClick="closeDialog(deleteDialog)"
+                                            styleClass="slds-button slds-button--brand slds-button--neutral slds-not-selected" reRender="resform"/>
+                    </div>
+                </div>
+            </apex:form>
+        </div>
+        <div id="updateDialog">
+            <apex:form id="updateForm">
+            </apex:form>
+        </div>
+    </div>
+    </body>
+    </html>
+    <script>
+        $(document).ready(function () {
+        $("#deleteDialog").dialog({
+            autoOpen: false,
+            modal: true,
+            title: '{!$Label.Delete}',
+            width: 370,
+            height: 200,
+            position: 'center' });
+        $("#updateDialog").dialog({ autoOpen: false,
+             modal: true,
+             title: '{!$Label.Update}',
+             width: 450,
+             height: 500,
+             position: 'center',
+             buttons: [
+                {
+                    text: "{!$Label.Cancel}",
+                    click: function () {
+                        $(this).dialog("close");
+                    }
+                 }
+                ]
+              });
+        });
+
+
+        openDialog = function(target){
+            $(target).dialog("open");
+        };
+
+        closeDialog = function(target){
+            $(target).dialog("close");
+        };
+
+
+    </script>
+</apex:page>

@@ -1,0 +1,77 @@
+<apex:page showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false"
+           docType="html-5.0" controller="SMS_ShopsExternalController">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.SLDS090, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <apex:slds/>
+    </head>
+    <body>
+    <div class="slds-scope">
+        <apex:form>
+            <div class="slds-form slds-form_compound">
+                <fieldset class="slds-form-element">
+                    <legend class="slds-form-element__label slds-text-title_caps">Search Shop</legend>
+                    <div class="slds-form-element__group">
+                        <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <label class="slds-form-element__label" for="input-01">Name</label>
+                                <apex:inputText value="{!searchParamsShop.Name}" styleClass="slds-input"
+                                                required="true"/>
+                            </div>
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <label class="slds-form-element__label" for="input-02">Country</label>
+                                <apex:inputText value="{!searchParamsShop.Country}" styleClass="slds-input"/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="slds-form-element">
+                    <div class="slds-form-element__group">
+                        <div class="slds-form-element__row">
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <label class="slds-form-element__label" for="input-01">City</label>
+                                <apex:inputText value="{!searchParamsShop.City}" styleClass="slds-input"/>
+                            </div>
+                            <div class="slds-form-element slds-size_1-of-2">
+                                <label class="slds-form-element__label" for="input-02">Country</label>
+                                <apex:inputText value="{!searchParamsShop.Email}" styleClass="slds-input"/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <apex:commandButton value="search" action="{!doCallout}" reRender="resBlock"/>
+        <apex:pageBlock id="resBlock">
+            <apex:pageBlockSection rendered="{!showResults}">
+                    <table class="slds-table slds-table--bordered">
+                        <thead>
+                        <tr style="width:100%;">
+                            <th scope="col">{!$Label.Action}</th>
+                            <th scope="col">{!$Label.Original_Name}</th>
+                            <th scope="col">{!$Label.Email}</th>
+                            <th scope="col">{!$Label.City}</th>
+                            <th scope="col">{!$Label.Country}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <apex:repeat value="{!Shops}" var="shop">
+                            <tr>
+                                <td><apex:commandLink value="{!$Label.Delete}"/> </td>
+                                <td>{!shop.Name}</td>
+                                <td>{!shop.Email}</td>
+                                <td>{!shop.City}</td>
+                                <td>{!shop.Country}</td>
+                            </tr>
+                        </apex:repeat>
+                        </tbody>
+                    </table>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+    </div>
+    </body>
+    </html>
+</apex:page>

@@ -1,0 +1,12 @@
+<!--
+ - Created by BRITENET on 11.04.2018.
+ -->
+
+<apex:component id="loadIcon">
+    <apex:actionStatus id="loading">
+        <apex:facet name="start">
+            <apex:image value="{!URLFOR($Resource.loader)}"
+                        style="position: fixed; top: 100px; left: 225px; background-color: rgba(0, 30, 44, 0.2); padding: 30%; padding-left:35%;  padding-right:45%;padding-top:7%;z-index:1000"/>
+        </apex:facet>
+    </apex:actionStatus>
+</apex:component>

@@ -5,7 +5,76 @@
     <option name="CUSTOM_SCOPE_NAME" value="Module 'Developer Org'" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a575538-7d64-4c2a-95a0-eb82f3856771" name="Default" comment="" />
+    <list default="true" id="4a575538-7d64-4c2a-95a0-eb82f3856771" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopCallout.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopEditController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopImportCSVWrapper.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopImportCSVWrapper.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopRestWebService.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopRestWebService.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopSOAPWebService.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopSOAPWebService.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopViewController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopViewController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopViewUtils.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopViewUtils.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsExternalController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsExternalController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsExternalControllerTest.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsExternalControllerTest.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsImportCSVController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsImportCSVController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsRandomPublicController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_ShopsRandomPublicController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_Util.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_Util.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleRestWebService.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleRestWebService.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleSOAPWebService.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleSOAPWebService.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleViewController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesaleViewController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesalesExternalController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/SMS_WholesalesExternalController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/buforController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/buforController.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SMS_loadIcon.component" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SMS_loadIcon.component-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopSearchXLS.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsExternal.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsExternal.page-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsImportCSV.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsImportCSV.page-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsRandomPublic.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_ShopsRandomPublic.page-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_WholesalesExternal.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/SMS_WholesalesExternal.page-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/triggers/SMSShopTrigger.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Developer Org.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Developer Org.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/Developer_Org/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/Developer_Org/OfflineSymbolTable.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_PopUpWindow.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopCSVWrapper.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_ShopCSVWrapper.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_RandomShopsController.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_ShopCallout.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/testPagin.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/testPagin.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SMS_ShopEditController.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_ShopCSVDownload.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_ShopCSVDownload.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_ShopEdit.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_ShopEdit.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_ShopSearch.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_ShopSearch.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_ShopView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_ShopView.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SMS_WholesaleView.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_WholesaleView.page" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/testPagin.page" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/testPagin.page-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SMS_ShopSearchXLS.page-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/SMS_SupplyTrigger.trigger" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/SMS_SupplyTrigger.trigger-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/SMSShopTrigger.trigger-meta.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,77 +85,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SMS_ShopView.page" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMS_ShopSearch.page" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="80" lean-forward="true" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
-              <folding>
-                <element signature="n#style#0;n#apex:image#0;n#apex:facet#0;n#apex:actionStatus#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#apex:page#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMS_ShopSearchController.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" selection-start-line="13" selection-end-line="21" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testPagin.cls" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/classes/testPagin.cls">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testPagin.page" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/testPagin.page">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-              <folding>
-                <element signature="n#style#0;n#apex:outputPanel#0;n#apex:panelGrid#0;n#apex:pageBlock#0;n#apex:form#0;n#apex:page#0;n#apex:page#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMS_ShopPagination.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls">
+      <file leaf-file-name="SMS_WholesaleView.page" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleView.page">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="144" column="102" lean-forward="true" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMS_ShopMessaging.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="SMS_WholesaleViewController.cls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesaleViewController.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMS_ShopSearchUtils.cls" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="SMS_Util.cls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/SMS_Util.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="215" column="48" lean-forward="true" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SMS_WholesalesExternalController.cls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesalesExternalController.cls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="689">
+              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SMS_WholesalesExternal.page" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesalesExternal.page">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="129" column="130" selection-start-line="129" selection-start-column="130" selection-end-line="129" selection-end-column="130" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#apex:outputPanel#0;n#apex:form#1;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#apex:repeat#0;n#tbody#0;n#table#0;n#apex:outputPanel#0;n#apex:form#1;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#apex:form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#apex:form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -94,6 +143,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Visualforce Component" />
         <option value="Apex Trigger" />
         <option value="Apex Class" />
         <option value="Visualforce Page" />
@@ -103,36 +153,95 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nothi</find>
+      <find>showpage</find>
+      <find>send</find>
+      <find>FCC_</find>
+      <find>name</find>
+      <find>shopsavailable</find>
+      <find>Shop</find>
+      <find>statu</find>
+      <find>status</find>
+      <find>statusOfImport</find>
+      <find>pageBlock</find>
+      <find>&lt;/apex:pageBlockSect</find>
+      <find>csvFileBo</find>
+      <find>csvAsSt</find>
+      <find>shopsToImport</find>
+      <find>rerenderTab</find>
+      <find>update</find>
+      <find>record</find>
+      <find>image</find>
+      <find>selected</find>
+      <find>supplies</find>
+      <find>shopsToAddIds</find>
+      <find>removedShopId</find>
+      <find>search</find>
+      <find>getContracts</find>
+      <find>debug</find>
+      <find>cont</find>
+      <find>shop</find>
+      <find>add_cont</find>
+      <find>remove</find>
+      <find>getuser</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/classes/PopUpWindow.cls" />
-        <option value="$PROJECT_DIR$/src/pages/wholesaleedit.page" />
-        <option value="$PROJECT_DIR$/src/pages/shopedit.page" />
-        <option value="$PROJECT_DIR$/src/pages/shopview.page" />
-        <option value="$PROJECT_DIR$/src/pages/wholesaleview.page" />
-        <option value="$PROJECT_DIR$/src/staticresources/SMS_View.resource" />
-        <option value="$PROJECT_DIR$/src/triggers/SuppliesTrigger.trigger" />
-        <option value="$PROJECT_DIR$/src/triggers/SupplyTrigger.trigger" />
-        <option value="$PROJECT_DIR$/src/triggers/SMS_SupplyTrigger.trigger" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_WholesaleView.page" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopCountryPicklist.cls" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_ShopEdit.page" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopCSVWrapper.cls" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_ShopCSVDownload.page" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_ShopView.page" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls" />
-        <option value="$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls" />
-        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearch.page" />
-        <option value="$PROJECT_DIR$/src/pages/testPagin.page" />
         <option value="$PROJECT_DIR$/src/classes/testPagin.cls" />
+        <option value="$PROJECT_DIR$/src/pages/testMap.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls" />
+        <option value="$PROJECT_DIR$/src/components/loadIcon.component" />
+        <option value="$PROJECT_DIR$/src/pages/testPagin.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearchingController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/testpagincontroller.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearching.page" />
+        <option value="$PROJECT_DIR$/src/pages/testpagin.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_PopUpWindow.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearchCSVDownload.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearchXLSDownload.page" />
+        <option value="$PROJECT_DIR$/src/pages/bufor.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopCSVDownload.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_RandomShopsController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearchXLS.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopSearch.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopViewController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopCSVWrapper.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopService.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMSShopTriggerUtil.cls" />
+        <option value="$PROJECT_DIR$/src/triggers/SMS_ShopTrigger.trigger" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopViewUtils.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopsRandomPublicController.cls" />
+        <option value="$PROJECT_DIR$/src/triggers/SMSShopTrigger.trigger" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopsImportCSV.page" />
+        <option value="$PROJECT_DIR$/src/classes/buforController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopsImportCSVController.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopEditController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopEdit.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopView.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopImportCSVWrapper.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopRestWebService.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopsExternal.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopsExternalControllerTest.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_WholesaleSOAPWebService.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopSOAPWebService.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_WholesaleRestWebService.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopCallout.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_ShopsExternalController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopsExternal.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_WholesaleViewController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_WholesaleView.page" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_ShopsRandomPublic.page" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_Util.cls" />
+        <option value="$PROJECT_DIR$/src/classes/SMS_WholesalesExternalController.cls" />
+        <option value="$PROJECT_DIR$/src/pages/SMS_WholesalesExternal.page" />
       </list>
     </option>
   </component>
@@ -142,7 +251,7 @@
         <entry key="Developer Org">
           <value>
             <ModuleWorkspaceSettings>
-              <option name="moduleContentsLastModified" value="1523459852770" />
+              <option name="moduleContentsLastModified" value="1524481910011" />
             </ModuleWorkspaceSettings>
           </value>
         </entry>
@@ -152,8 +261,7 @@
       <ProjectWorkspaceSettings>
         <option name="anonymousApexSettings">
           <AnonymousApexSettings>
-            <option name="apexLogLevel" value="FINEST" />
-            <option name="documentText" value="&#10;" />
+            <option name="documentText" value="List&lt;SMS_Supply__c&gt; sups = [SELECT Id FROM SMS_Supply__c where Wholesale__c='a021r00000eFj1C'];&#10;delete sups;&#10;&#10;SMS_Util.Wholesale wh = new SMS_Util.Wholesale();&#10;&#10;wh.Country = '';&#10;wh.name = 'g';&#10;SMS_Util.makeGetCallout(wh);&#10;&#10;SMS_Util.login();&#10;&#10;Id id = 'a011r00003dfeCt';&#10;List&lt;Id&gt; ids = new List&lt;Id&gt;();&#10;ids.add(id);&#10;SMS_Util.makeDeleteCalloutWholesales(ids);" />
           </AnonymousApexSettings>
         </option>
         <option name="connectionWorkspaceSettings">
@@ -163,26 +271,47 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
+                      <entry key="CLASSES/BUFORCONTROLLER.CLS" value="1524129336000" />
                       <entry key="CLASSES/POPUPWINDOW.CLS" value="1523223655979" />
-                      <entry key="CLASSES/SMS_SHOPCSVWRAPPER.CLS" value="1523443301153" />
-                      <entry key="CLASSES/SMS_SHOPMESSAGING.CLS" value="1523458294822" />
-                      <entry key="CLASSES/SMS_SHOPPAGINATION.CLS" value="1523459634035" />
-                      <entry key="CLASSES/SMS_SHOPSEARCHCONTROLLER.CLS" value="1523460200442" />
-                      <entry key="CLASSES/SMS_SHOPSEARCHUTILS.CLS" value="1523458290284" />
-                      <entry key="CLASSES/TESTPAGIN.CLS" value="1523461078974" />
+                      <entry key="CLASSES/SMS_RANDOMSHOPSCONTROLLER.CLS" value="1523884350000" />
+                      <entry key="CLASSES/SMS_SHOPCALLOUT.CLS" value="1524478512350" />
+                      <entry key="CLASSES/SMS_SHOPCSVWRAPPER.CLS" value="1524004192507" />
+                      <entry key="CLASSES/SMS_SHOPEDITCONTROLLER.CLS" value="1524141435604" />
+                      <entry key="CLASSES/SMS_SHOPIMPORTCSVWRAPPER.CLS" value="1524210440983" />
+                      <entry key="CLASSES/SMS_SHOPRESTWEBSERVICE.CLS" value="1524474196829" />
+                      <entry key="CLASSES/SMS_SHOPSEARCHCONTROLLER.CLS" value="1524046325703" />
+                      <entry key="CLASSES/SMS_SHOPSEARCHUTILS.CLS" value="1524004317908" />
+                      <entry key="CLASSES/SMS_SHOPSEXTERNALCONTROLLER.CLS" value="1524478549468" />
+                      <entry key="CLASSES/SMS_SHOPSEXTERNALCONTROLLERTEST.CLS" value="1524473387792" />
+                      <entry key="CLASSES/SMS_SHOPSIMPORTCSVCONTROLLER.CLS" value="1524140903094" />
+                      <entry key="CLASSES/SMS_SHOPSOAPWEBSERVICE.CLS" value="1524473776172" />
+                      <entry key="CLASSES/SMS_SHOPSRANDOMPUBLICCONTROLLER.CLS" value="1524119091000" />
+                      <entry key="CLASSES/SMS_SHOPVIEWCONTROLLER.CLS" value="1524001790576" />
+                      <entry key="CLASSES/SMS_SHOPVIEWUTILS.CLS" value="1524081766817" />
+                      <entry key="CLASSES/SMS_UTIL.CLS" value="1524581188072" />
+                      <entry key="CLASSES/SMS_WHOLESALERESTWEBSERVICE.CLS" value="1524474533763" />
+                      <entry key="CLASSES/SMS_WHOLESALESEXTERNALCONTROLLER.CLS" value="1524585336222" />
+                      <entry key="CLASSES/SMS_WHOLESALESOAPWEBSERVICE.CLS" value="1524473604869" />
+                      <entry key="CLASSES/SMS_WHOLESALEVIEWCONTROLLER.CLS" value="1524559799391" />
+                      <entry key="COMPONENTS/LOADICON.COMPONENT" value="1523534006225" />
                       <entry key="PAGES/SHOPEDIT.PAGE" value="1523266199725" />
                       <entry key="PAGES/SHOPVIEW.PAGE" value="1523266239362" />
-                      <entry key="PAGES/SMS_SHOPCSVDOWNLOAD.PAGE" value="1523443673773" />
-                      <entry key="PAGES/SMS_SHOPEDIT.PAGE" value="1523361665053" />
-                      <entry key="PAGES/SMS_SHOPSEARCH.PAGE" value="1523459904773" />
-                      <entry key="PAGES/SMS_SHOPVIEW.PAGE" value="1523455225779" />
-                      <entry key="PAGES/SMS_WHOLESALEEDIT.PAGE" value="1523361651192" />
-                      <entry key="PAGES/SMS_WHOLESALEVIEW.PAGE" value="1523273276518" />
-                      <entry key="PAGES/TESTPAGIN.PAGE" value="1523461082683" />
+                      <entry key="PAGES/SMS_SHOPCSVDOWNLOAD.PAGE" value="1523584667706" />
+                      <entry key="PAGES/SMS_SHOPEDIT.PAGE" value="1524141562312" />
+                      <entry key="PAGES/SMS_SHOPSEARCH.PAGE" value="1523897198156" />
+                      <entry key="PAGES/SMS_SHOPSEARCHXLS.PAGE" value="1523896935488" />
+                      <entry key="PAGES/SMS_SHOPSEARCHXLSDOWNLOAD.PAGE" value="1523582210138" />
+                      <entry key="PAGES/SMS_SHOPSEXTERNAL.PAGE" value="1524481298717" />
+                      <entry key="PAGES/SMS_SHOPSIMPORTCSV.PAGE" value="1524128504838" />
+                      <entry key="PAGES/SMS_SHOPSRANDOMPUBLIC.PAGE" value="1524568488312" />
+                      <entry key="PAGES/SMS_SHOPVIEW.PAGE" value="1524081853574" />
+                      <entry key="PAGES/SMS_WHOLESALEEDIT.PAGE" value="1523535170663" />
+                      <entry key="PAGES/SMS_WHOLESALESEXTERNAL.PAGE" value="1524585565872" />
+                      <entry key="PAGES/SMS_WHOLESALEVIEW.PAGE" value="1524560054411" />
                       <entry key="PAGES/WHOLESALEEDIT.PAGE" value="1523258842436" />
                       <entry key="PAGES/WHOLESALEVIEW.PAGE" value="1523266320739" />
                       <entry key="STATICRESOURCES/SMS_VIEW.RESOURCE" value="1523272282000" />
-                      <entry key="TRIGGERS/SMS_SUPPLYTRIGGER.TRIGGER" value="1523272545000" />
+                      <entry key="TRIGGERS/SMSSHOPTRIGGER.TRIGGER" value="1524122425773" />
                       <entry key="TRIGGERS/SUPPLYTRIGGER.TRIGGER" value="1523272282000" />
                     </map>
                   </option>
@@ -219,6 +348,7 @@
         <option name="logViewerSettings">
           <LogViewerSettings>
             <option name="logViewerSplitVertical" value="false" />
+            <option name="splitterProportion" value="0.32997987" />
           </LogViewerSettings>
         </option>
         <option name="metadataContents">
@@ -226,208 +356,142 @@
             <entry key="Developer Org">
               <value>
                 <MetadataContents>
-                  <option name="lastPopulated" value="1523427987674" />
+                  <option name="lastPopulated" value="1524128844899" />
                   <option name="metadataTypes">
                     <set>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Custom%3A Support Profile" />
-                            <option value="Customer Community Plus Login User" />
-                            <option value="High Volume Customer Portal User" />
-                            <option value="Analytics Cloud Integration User" />
-                            <option value="Cross Org Data Proxy User" />
-                            <option value="Force%2Ecom - Free User" />
-                            <option value="PlatformPortal" />
-                            <option value="External Identity User" />
-                            <option value="Force%2Ecom - App Subscription User" />
-                            <option value="Standard" />
-                            <option value="Chatter External User" />
-                            <option value="Manager" />
-                            <option value="Identity User" />
-                            <option value="Custom%3A Sales Profile" />
-                            <option value="Partner Community Login User" />
-                            <option value="ContractManager" />
-                            <option value="Customer Community Plus User" />
-                            <option value="Partner Community User" />
-                            <option value="StandardAul" />
-                            <option value="Chatter Moderator User" />
-                            <option value="Gold Partner User" />
-                            <option value="ReadOnly" />
-                            <option value="SolutionManager" />
-                            <option value="Chatter Free User" />
-                            <option value="Shop Assistant" />
-                            <option value="HighVolumePortal" />
-                            <option value="MarketingProfile" />
-                            <option value="Customer Portal Manager Standard" />
-                            <option value="Customer Community Login User" />
-                            <option value="Analytics Cloud Security User" />
-                            <option value="Admin" />
-                            <option value="Silver Partner User" />
-                            <option value="Work%2Ecom Only User" />
-                            <option value="Partner App Subscription User" />
-                            <option value="Authenticated Website" />
-                            <option value="Customer Community User" />
-                            <option value="Custom%3A Marketing Profile" />
-                            <option value="Customer Portal Manager Custom" />
+                            <option value="Delete" />
+                            <option value="All" />
+                            <option value="Add_new_contract" />
+                            <option value="Csv_Error" />
+                            <option value="Email" />
+                            <option value="Import" />
+                            <option value="Address" />
+                            <option value="Reverse" />
+                            <option value="Shops_we_collaborate" />
+                            <option value="Imported" />
+                            <option value="Process" />
+                            <option value="Edit" />
+                            <option value="Not_Image" />
+                            <option value="Update" />
+                            <option value="Name" />
+                            <option value="Send" />
+                            <option value="Date_Overlapping" />
+                            <option value="Search" />
+                            <option value="Wholesale_Map" />
+                            <option value="No_results" />
+                            <option value="Basic_Info" />
+                            <option value="Status" />
+                            <option value="Accept" />
+                            <option value="Add_Contract" />
+                            <option value="Not_Accept" />
+                            <option value="Ukraine" />
+                            <option value="Original_Name" />
+                            <option value="For_contact" />
+                            <option value="City" />
+                            <option value="Select_to_import" />
+                            <option value="Shop" />
+                            <option value="Details" />
+                            <option value="Country" />
+                            <option value="Save" />
+                            <option value="Germany" />
+                            <option value="Add_Wholesale" />
+                            <option value="Action" />
+                            <option value="Cancel" />
+                            <option value="Confirm" />
+                            <option value="Search_Form" />
+                            <option value="Shop_Management_System" />
+                            <option value="Save_image" />
+                            <option value="Confirm_Delete_Image" />
+                            <option value="Clear" />
+                            <option value="Address_not_Found" />
+                            <option value="Email_Required" />
+                            <option value="Poland" />
+                            <option value="Image_too_big" />
+                            <option value="Download" />
+                            <option value="Body" />
+                            <option value="Duplicated_Record" />
+                            <option value="USA" />
+                            <option value="Search_for_Shop" />
+                            <option value="Random_shops_header" />
+                            <option value="View" />
+                            <option value="Subject" />
+                            <option value="Import_Shops" />
+                            <option value="Start_before_End_Error" />
+                            <option value="Results" />
+                            <option value="Smth_Error" />
+                            <option value="Success_New_Supply" />
+                            <option value="Search_Results" />
+                            <option value="Select" />
+                            <option value="None" />
+                            <option value="Wholesale" />
                           </set>
                         </option>
-                        <option name="name" value="Profile" />
+                        <option name="name" value="CustomLabel" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="ApexDevNet" />
+                            <option value="NewGroup" />
+                            <option value="Task.EditDescription" />
+                            <option value="FeedItem.NewTaskFromFeedItem" />
+                            <option value="NewNote" />
+                            <option value="CollaborationGroup.NewGroupMember" />
+                            <option value="Task.EditDescription_0" />
+                            <option value="CollaborationGroup.NewGroupRecord" />
+                            <option value="NewLead" />
+                            <option value="SendEmail" />
+                            <option value="Task.UpdateStatus" />
+                            <option value="NewOpportunity" />
+                            <option value="NewTask" />
+                            <option value="Task.Defer_0" />
+                            <option value="Task.UpdateStatus_0" />
+                            <option value="NewAccount" />
+                            <option value="Case.NewChildCase" />
+                            <option value="Case.LogACall" />
+                            <option value="Task.UpdatePriority" />
+                            <option value="Task.UpdatePriority_0" />
+                            <option value="NewContact" />
+                            <option value="Task.Defer" />
+                            <option value="NewCase" />
+                            <option value="LogACall" />
+                            <option value="NewEvent" />
                           </set>
                         </option>
-                        <option name="name" value="RemoteSiteSetting" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c.Add_year_next_anniversary" />
-                            <option value="SMS_Shop__c.Update_Next_Anniversary" />
-                          </set>
-                        </option>
-                        <option name="name" value="WorkflowFieldUpdate" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="Workflow" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c.Sends_email_with_anniversary_info" />
-                          </set>
-                        </option>
-                        <option name="name" value="WorkflowAlert" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c.Set Anniversary" />
-                            <option value="SMS_Shop__c.Anniversary email" />
-                          </set>
-                        </option>
-                        <option name="name" value="WorkflowRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead.Standard_Lead_Duplicate_Rule" />
-                            <option value="Account.Standard_Account_Duplicate_Rule" />
-                            <option value="Contact.Standard_Contact_Duplicate_Rule" />
-                          </set>
-                        </option>
-                        <option name="name" value="DuplicateRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_SupplyTrigger" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexTrigger" />
+                        <option name="name" value="QuickAction" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
                             <option value="Account" />
-                            <option value="Company" />
-                            <option value="Address" />
-                            <option value="Macro" />
-                            <option value="Product" />
-                            <option value="Security" />
-                            <option value="Knowledge" />
-                            <option value="Name" />
-                            <option value="Ideas" />
-                            <option value="Case" />
-                            <option value="FieldService" />
-                            <option value="SocialCustomerService" />
-                            <option value="OmniChannel" />
-                            <option value="Opportunity" />
-                            <option value="Search" />
-                            <option value="FileUploadAndDownloadSecurity" />
-                            <option value="Activities" />
+                            <option value="Lead" />
+                            <option value="SMS_Shop__c" />
+                            <option value="Contact" />
+                          </set>
+                        </option>
+                        <option name="name" value="MatchingRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="Order" />
-                            <option value="OrgPreference" />
-                            <option value="BusinessHours" />
-                            <option value="Mobile" />
-                            <option value="Forecasting" />
-                            <option value="Quote" />
-                            <option value="LiveAgent" />
-                            <option value="PersonalJourney" />
-                            <option value="Entitlement" />
-                            <option value="PathAssistant" />
-                            <option value="Contract" />
-                          </set>
-                        </option>
-                        <option name="name" value="Settings" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="DataCloudGeoLocation" />
-                          </set>
-                        </option>
-                        <option name="name" value="CleanDataService" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Country" />
-                          </set>
-                        </option>
-                        <option name="name" value="GlobalValueSet" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Case.Standard" />
-                          </set>
-                        </option>
-                        <option name="name" value="EscalationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
+                            <option value="Account" />
+                            <option value="User" />
+                            <option value="SMS_Setting__c" />
+                            <option value="SMS_Shop__c" />
                             <option value="Case" />
+                            <option value="Contact" />
+                            <option value="SMS_Wholesale__c" />
+                            <option value="Campaign" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="Asset" />
+                            <option value="SMS_Trigger_Exceptions__c" />
                           </set>
                         </option>
-                        <option name="name" value="EscalationRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Delete" />
-                            <option value="USA" />
-                            <option value="Email" />
-                            <option value="Address" />
-                            <option value="Search_for_Shop" />
-                            <option value="Accept" />
-                            <option value="Not_Accept" />
-                            <option value="Cancel" />
-                            <option value="Ukraine" />
-                            <option value="Edit" />
-                            <option value="City" />
-                            <option value="Search_Form" />
-                            <option value="Name" />
-                            <option value="Clear" />
-                            <option value="Search_Results" />
-                            <option value="Search" />
-                            <option value="Poland" />
-                            <option value="Country" />
-                            <option value="Save" />
-                            <option value="Germany" />
-                            <option value="Basic_Info" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomLabel" />
+                        <option name="name" value="SharingRules" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -440,290 +504,12 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Metric.Progress" />
-                            <option value="Metric.Completion" />
-                          </set>
-                        </option>
-                        <option name="name" value="RecordType" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Opportunity.DeliveryStatus" />
-                            <option value="Campaign.ViewCampaignInfluenceReport" />
-                            <option value="Case.UpsellCrosssellOpportunity" />
-                            <option value="Account.Billing" />
-                          </set>
-                        </option>
-                        <option name="name" value="WebLink" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c.Polish_Prefix" />
-                          </set>
-                        </option>
-                        <option name="name" value="ValidationRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="DirectorDirectSales" />
-                            <option value="SVPSalesMarketing" />
-                            <option value="MarketingTeam" />
-                            <option value="COO" />
-                            <option value="DirectorChannelSales" />
-                            <option value="InstallationRepairServices" />
-                            <option value="SVPHumanResources" />
-                            <option value="SVPCustomerServiceSupport" />
-                            <option value="VPInternationalSales" />
-                            <option value="ChannelSalesTeam" />
-                            <option value="EasternSalesTeam" />
-                            <option value="CEO" />
-                            <option value="CFO" />
-                            <option value="CustomerSupportInternational" />
-                            <option value="CustomerSupportNorthAmerica" />
-                            <option value="WesternSalesTeam" />
-                            <option value="VPMarketing" />
-                            <option value="VPNorthAmericanSales" />
-                          </set>
-                        </option>
-                        <option name="name" value="Role" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Lead" />
-                            <option value="Contact" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="jQuery_UI_style" />
-                            <option value="jQueryUI" />
-                            <option value="jQuery" />
-                            <option value="jQuery_UI" />
-                            <option value="loader" />
-                            <option value="jquery_tabletoCSV" />
-                            <option value="SMS_View" />
-                          </set>
-                        </option>
-                        <option name="name" value="StaticResource" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c-en_US" />
-                            <option value="SMS_Wholesale__c-en_US" />
-                            <option value="SMS_Supply__c-en_US" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObjectTranslation" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account-Account %28Sales%29 Layout" />
-                            <option value="Contact-Contact %28Support%29 Layout" />
-                            <option value="Product2-Product Layout" />
-                            <option value="Lead-Lead Layout" />
-                            <option value="Contact-Contact Layout" />
-                            <option value="Case-Case %28Sales%29 Layout" />
-                            <option value="Lead-Lead %28Support%29 Layout" />
-                            <option value="DandBCompany-D%26B Company Layout" />
-                            <option value="AssetRelationship-Asset Relationship Layout" />
-                            <option value="Case-Case %28Support%29 Layout" />
-                            <option value="Macro-Macro Layout" />
-                            <option value="Order-Order Layout" />
-                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
-                            <option value="Solution-Solution Layout" />
-                            <option value="ScorecardMetric-Scorecard Metric Layout" />
-                            <option value="Event-Event Layout" />
-                            <option value="Pricebook2-Price Book Layout" />
-                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
-                            <option value="UserProvAccount-User Provisioning Account Layout" />
-                            <option value="Contact-Contact %28Marketing%29 Layout" />
-                            <option value="Task-Task Layout" />
-                            <option value="SMS_Supply__c-Supply Layout" />
-                            <option value="Opportunity-Opportunity Layout" />
-                            <option value="Asset-Asset Layout" />
-                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
-                            <option value="OrderItem-Order Product Layout" />
-                            <option value="SMS_Shop__c-Shop Layout" />
-                            <option value="OpportunityLineItem-Opportunity Product Layout" />
-                            <option value="SMS_Supply__c-Wholesale Layout" />
-                            <option value="Case-Case Layout" />
-                            <option value="Contract-Contract Layout" />
-                            <option value="Account-Account Layout" />
-                            <option value="Campaign-Campaign Layout" />
-                            <option value="ScorecardAssociation-Scorecard Association Layout" />
-                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
-                            <option value="SocialPersona-Social Persona Layout" />
-                            <option value="Scorecard-Scorecard Layout" />
-                            <option value="Case-Case %28Marketing%29 Layout" />
-                            <option value="PricebookEntry-Price Book Entry Layout" />
-                            <option value="CaseClose-Close Case Layout" />
-                            <option value="Idea-Idea Layout" />
-                            <option value="ContentVersion-Content Version Layout" />
-                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
-                            <option value="Global-Global Layout" />
-                            <option value="Lead-Lead %28Sales%29 Layout" />
-                            <option value="Account-Account %28Marketing%29 Layout" />
-                            <option value="EmailMessage-Email Message Layout" />
-                            <option value="SocialPost-Social Post Layout" />
-                            <option value="CampaignMember-Campaign Member Page Layout" />
-                            <option value="Account-Account %28Support%29 Layout" />
-                            <option value="QuickText-Quick Text Layout" />
-                            <option value="Contact-Contact %28Sales%29 Layout" />
-                            <option value="User-User Layout" />
-                            <option value="Lead-Lead %28Marketing%29 Layout" />
-                            <option value="SMS_Wholesale__c-Wholesale Layout" />
-                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
-                          </set>
-                        </option>
-                        <option name="name" value="Layout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_ShopSearchController" />
-                            <option value="SMS_PopUpWindow" />
-                            <option value="SMS_ShopSearchUtils" />
-                          </set>
-                        </option>
-                        <option name="name" value="ApexClass" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Account" />
-                            <option value="Task" />
-                            <option value="CollaborationGroup" />
-                            <option value="ForecastingCategoryMapping" />
-                            <option value="OpportunityLineItem" />
-                            <option value="CaseContactRole" />
-                            <option value="Activity" />
-                            <option value="Document" />
-                            <option value="ContactCleanInfo" />
-                            <option value="SMS_Wholesale__c" />
-                            <option value="ScorecardMetric" />
-                            <option value="PushTopic" />
-                            <option value="ContractContactRole" />
-                            <option value="FeedItem" />
-                            <option value="ExchangeUserMapping" />
-                            <option value="SocialPersona" />
-                            <option value="Asset" />
-                            <option value="CampaignMember" />
-                            <option value="Order" />
-                            <option value="CollaborationGroupMember" />
-                            <option value="StreamingChannel" />
-                            <option value="AccountContactRole" />
-                            <option value="EmailMessage" />
-                            <option value="Pricebook2" />
-                            <option value="AccountCleanInfo" />
-                            <option value="UserProvisioningRequest" />
-                            <option value="OrgDeleteRequest" />
-                            <option value="PricebookEntry" />
-                            <option value="Campaign" />
-                            <option value="LeadCleanInfo" />
-                            <option value="Idea" />
-                            <option value="ScorecardAssociation" />
-                            <option value="Contract" />
-                            <option value="PartnerRole" />
-                            <option value="OpportunityCompetitor" />
-                            <option value="MacroAction" />
-                            <option value="Site" />
-                            <option value="User" />
-                            <option value="Product2" />
-                            <option value="Macro" />
-                            <option value="MacroInstruction" />
-                            <option value="DuplicateRecordItem" />
-                            <option value="SMS_Shop__c" />
-                            <option value="Case" />
-                            <option value="ContentVersion" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="DuplicateRecordSet" />
-                            <option value="Topic" />
-                            <option value="Scorecard" />
-                            <option value="Solution" />
-                            <option value="QuickText" />
-                            <option value="AssetRelationship" />
-                            <option value="DandBCompany" />
-                            <option value="SMS_Supply__c" />
-                            <option value="OpportunityContactRole" />
-                            <option value="Contact" />
-                            <option value="OrderItem" />
-                            <option value="AssistantProgress" />
-                            <option value="Event" />
-                            <option value="TopicAssignment" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomObject" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Shop__c.Email__c" />
-                            <option value="Opportunity.TrackingNumber__c" />
-                            <option value="Account.Active__c" />
-                            <option value="Case.SLAViolation__c" />
-                            <option value="Lead.Primary__c" />
-                            <option value="SMS_Wholesale__c.Email__c" />
-                            <option value="SMS_Shop__c.Street__c" />
-                            <option value="Opportunity.DeliveryInstallationStatus__c" />
-                            <option value="Lead.CurrentGenerators__c" />
-                            <option value="Account.NumberofLocations__c" />
-                            <option value="Contact.Level__c" />
-                            <option value="SMS_Wholesale__c.House_Number__c" />
-                            <option value="Opportunity.MainCompetitors__c" />
-                            <option value="Goal.OrigGoalId__c" />
-                            <option value="Account.SLASerialNumber__c" />
-                            <option value="Account.UpsellOpportunity__c" />
-                            <option value="SMS_Wholesale__c.City__c" />
-                            <option value="Account.CustomerPriority__c" />
-                            <option value="SMS_Supply__c.Wholesale__c" />
-                            <option value="Account.SLA__c" />
-                            <option value="SMS_Shop__c.Phone__c" />
-                            <option value="Lead.SICCode__c" />
-                            <option value="SMS_Wholesale__c.Phone__c" />
-                            <option value="Contact.Languages__c" />
-                            <option value="Opportunity.OrderNumber__c" />
-                            <option value="Metric.OrigMetricId__c" />
-                            <option value="Case.EngineeringReqNumber__c" />
-                            <option value="SMS_Supply__c.Shop__c" />
-                            <option value="Account.SLAExpirationDate__c" />
-                            <option value="SMS_Shop__c.House_Number__c" />
-                            <option value="Opportunity.CurrentGenerators__c" />
-                            <option value="SMS_Wholesale__c.Street__c" />
-                            <option value="SMS_Shop__c.Previous_Name__c" />
-                            <option value="SMS_Shop__c.Country__c" />
-                            <option value="SMS_Wholesale__c.Country__c" />
-                            <option value="Case.PotentialLiability__c" />
-                            <option value="Lead.ProductInterest__c" />
-                            <option value="SMS_Wholesale__c.Website__c" />
-                            <option value="SMS_Shop__c.Next_Anniversary__c" />
-                            <option value="Lead.NumberofLocations__c" />
-                            <option value="Case.Product__c" />
-                            <option value="User.Country__c" />
-                            <option value="SMS_Shop__c.City__c" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomField" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Supply__c.All" />
                             <option value="Order.AllActivatedOrders" />
+                            <option value="SMS_Supply__c.All" />
                             <option value="Opportunity.NewThisWeek" />
                             <option value="Case.AllOpenCases" />
-                            <option value="Order.AllDraftOrders" />
                             <option value="Case.MyCases" />
+                            <option value="Order.AllDraftOrders" />
                             <option value="User.ActiveUsers" />
                             <option value="Order.AllOrders" />
                             <option value="Scorecard.MyScorecards" />
@@ -751,26 +537,26 @@
                             <option value="Contact.BirthdaysThisMonth" />
                             <option value="Opportunity.ClosingThisMonth" />
                             <option value="Account.AllAccounts" />
-                            <option value="Contact.NewThisWeek" />
                             <option value="CollaborationGroup.All_ChatterGroups" />
+                            <option value="Contact.NewThisWeek" />
                             <option value="Activity.AllActivities" />
                             <option value="Opportunity.NewLastWeek" />
                             <option value="Asset.AllAssets" />
                             <option value="User.AdminUsers" />
                             <option value="Scorecard.AllScorecards" />
-                            <option value="Opportunity.MyOpportunities" />
                             <option value="Campaign.MyActiveCampaigns" />
+                            <option value="Opportunity.MyOpportunities" />
                             <option value="Lead.MyUnreadLeads" />
                             <option value="Campaign.AllActiveCampaigns" />
                             <option value="Product2.AllProducts" />
-                            <option value="Contact.MyContacts" />
                             <option value="Activity.TodaysTasks" />
-                            <option value="Case.AllClosedCases" />
+                            <option value="Contact.MyContacts" />
                             <option value="Opportunity.Won" />
+                            <option value="Case.AllClosedCases" />
                             <option value="Solution.AllReviewedSolutions" />
                             <option value="Account.PlatinumandGoldSLACustomers" />
-                            <option value="Activity.MyActivities" />
                             <option value="Contract.MyInApprovalContracts" />
+                            <option value="Activity.MyActivities" />
                             <option value="Contract.AllInApprovalContracts" />
                             <option value="WorkFeedbackTemplate.All" />
                             <option value="Lead.AllOpenLeads" />
@@ -787,94 +573,13 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Internal Zone" />
+                            <option value="Lead.Standard_Lead_Duplicate_Rule" />
+                            <option value="Account.Standard_Account_Duplicate_Rule" />
+                            <option value="SMS_Shop__c.SMS_Duplicated_shop" />
+                            <option value="Contact.Standard_Contact_Duplicate_Rule" />
                           </set>
                         </option>
-                        <option name="name" value="Community" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="SMS_Wholesale__c" />
-                            <option value="Order" />
-                            <option value="Account" />
-                            <option value="Campaign" />
-                            <option value="User" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="Asset" />
-                            <option value="SMS_Shop__c" />
-                            <option value="Case" />
-                            <option value="Contact" />
-                          </set>
-                        </option>
-                        <option name="name" value="SharingRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="DE Default" />
-                          </set>
-                        </option>
-                        <option name="name" value="HomePageLayout" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead" />
-                            <option value="Case" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRules" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
-                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
-                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
-                          </set>
-                        </option>
-                        <option name="name" value="MatchingRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="sf_chttr_apps" />
-                            <option value="sf_com_apps" />
-                          </set>
-                        </option>
-                        <option name="name" value="InstalledPackage" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="Lead.Standard" />
-                            <option value="Case.Standard" />
-                          </set>
-                        </option>
-                        <option name="name" value="AssignmentRule" />
-                      </MetadataType>
-                      <MetadataType>
-                        <option name="members">
-                          <set>
-                            <option value="standard__Sales" />
-                            <option value="standard__LightningService" />
-                            <option value="standard__ServiceConsole" />
-                            <option value="Shop_Management_System" />
-                            <option value="standard__Community" />
-                            <option value="standard__AppLauncher" />
-                            <option value="standard__Chatter" />
-                            <option value="standard__Platform" />
-                            <option value="standard__Service" />
-                            <option value="standard__LightningSales" />
-                            <option value="standard__Sites" />
-                            <option value="standard__Marketing" />
-                            <option value="standard__Content" />
-                            <option value="standard__LightningSalesConsole" />
-                          </set>
-                        </option>
-                        <option name="name" value="CustomApplication" />
+                        <option name="name" value="DuplicateRule" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -888,6 +593,49 @@
                       <MetadataType>
                         <option name="members">
                           <set>
+                            <option value="Account" />
+                            <option value="Company" />
+                            <option value="Address" />
+                            <option value="Macro" />
+                            <option value="Product" />
+                            <option value="Security" />
+                            <option value="Knowledge" />
+                            <option value="Ideas" />
+                            <option value="Case" />
+                            <option value="Name" />
+                            <option value="FieldService" />
+                            <option value="SocialCustomerService" />
+                            <option value="OmniChannel" />
+                            <option value="Opportunity" />
+                            <option value="Search" />
+                            <option value="FileUploadAndDownloadSecurity" />
+                            <option value="Activities" />
+                            <option value="Order" />
+                            <option value="OrgPreference" />
+                            <option value="BusinessHours" />
+                            <option value="Mobile" />
+                            <option value="Forecasting" />
+                            <option value="Quote" />
+                            <option value="LiveAgent" />
+                            <option value="PersonalJourney" />
+                            <option value="Entitlement" />
+                            <option value="PathAssistant" />
+                            <option value="Contract" />
+                          </set>
+                        </option>
+                        <option name="name" value="Settings" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="unfiled$public" />
+                          </set>
+                        </option>
+                        <option name="name" value="EmailFolder" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
                             <option value="LightningSalesConsole_UtilityBar" />
                             <option value="LightningService_UtilityBar" />
                           </set>
@@ -897,55 +645,120 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Task.EditDescription" />
-                            <option value="NewGroup" />
-                            <option value="FeedItem.NewTaskFromFeedItem" />
-                            <option value="NewNote" />
-                            <option value="Task.EditDescription_0" />
-                            <option value="CollaborationGroup.NewGroupMember" />
-                            <option value="CollaborationGroup.NewGroupRecord" />
-                            <option value="NewLead" />
-                            <option value="SendEmail" />
-                            <option value="Task.UpdateStatus" />
-                            <option value="NewOpportunity" />
-                            <option value="NewTask" />
-                            <option value="Task.Defer_0" />
-                            <option value="Task.UpdateStatus_0" />
-                            <option value="NewAccount" />
-                            <option value="Case.LogACall" />
-                            <option value="Task.UpdatePriority" />
-                            <option value="Case.NewChildCase" />
-                            <option value="Task.UpdatePriority_0" />
-                            <option value="NewContact" />
-                            <option value="Task.Defer" />
-                            <option value="NewCase" />
-                            <option value="LogACall" />
-                            <option value="NewEvent" />
+                            <option value="Account" />
+                            <option value="Task" />
+                            <option value="CollaborationGroup" />
+                            <option value="ForecastingCategoryMapping" />
+                            <option value="OpportunityLineItem" />
+                            <option value="CaseContactRole" />
+                            <option value="Activity" />
+                            <option value="Document" />
+                            <option value="ContactCleanInfo" />
+                            <option value="SMS_Wholesale__c" />
+                            <option value="ScorecardMetric" />
+                            <option value="PushTopic" />
+                            <option value="ContractContactRole" />
+                            <option value="FeedItem" />
+                            <option value="ExchangeUserMapping" />
+                            <option value="SocialPersona" />
+                            <option value="Asset" />
+                            <option value="CampaignMember" />
+                            <option value="Order" />
+                            <option value="CollaborationGroupMember" />
+                            <option value="AccountContactRole" />
+                            <option value="StreamingChannel" />
+                            <option value="EmailMessage" />
+                            <option value="Pricebook2" />
+                            <option value="AccountCleanInfo" />
+                            <option value="UserProvisioningRequest" />
+                            <option value="OrgDeleteRequest" />
+                            <option value="PricebookEntry" />
+                            <option value="Campaign" />
+                            <option value="LeadCleanInfo" />
+                            <option value="Idea" />
+                            <option value="Contract" />
+                            <option value="ScorecardAssociation" />
+                            <option value="OpportunityCompetitor" />
+                            <option value="PartnerRole" />
+                            <option value="MacroAction" />
+                            <option value="Site" />
+                            <option value="User" />
+                            <option value="Product2" />
+                            <option value="Macro" />
+                            <option value="SMS_Setting__c" />
+                            <option value="MacroInstruction" />
+                            <option value="DuplicateRecordItem" />
+                            <option value="SMS_Shop__c" />
+                            <option value="Case" />
+                            <option value="ContentVersion" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="DuplicateRecordSet" />
+                            <option value="SMS_Trigger_Exceptions__c" />
+                            <option value="Scorecard" />
+                            <option value="Topic" />
+                            <option value="Solution" />
+                            <option value="QuickText" />
+                            <option value="AssetRelationship" />
+                            <option value="DandBCompany" />
+                            <option value="SMS_Supply__c" />
+                            <option value="OpportunityContactRole" />
+                            <option value="Contact" />
+                            <option value="OrderItem" />
+                            <option value="AssistantProgress" />
+                            <option value="Event" />
+                            <option value="TopicAssignment" />
                           </set>
                         </option>
-                        <option name="name" value="QuickAction" />
+                        <option name="name" value="CustomObject" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Salesforce1" />
-                            <option value="AppSwitcher" />
+                            <option value="SMS_Shop__c.Add_year_next_anniversary" />
+                            <option value="SMS_Shop__c.Update_Next_Anniversary" />
                           </set>
                         </option>
-                        <option name="name" value="AppMenu" />
+                        <option name="name" value="WorkflowFieldUpdate" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Shop_Assistant" />
+                            <option value="Case.Standard" />
+                            <option value="Lead.Standard" />
                           </set>
                         </option>
-                        <option name="name" value="PermissionSet" />
+                        <option name="name" value="AssignmentRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SMS_Shop__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="Workflow" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="unfiled$public" />
+                          </set>
+                        </option>
+                        <option name="name" value="ReportFolder" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case.Standard" />
+                          </set>
+                        </option>
+                        <option name="name" value="EscalationRule" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
                             <option value="Shop_Assistant_profileSessionSetting1522999032814" />
+                            <option value="Shops_Profile_profileSessionSetting1523546055822" />
                             <option value="Manager_profileSessionSetting1522999171323" />
                             <option value="Manager_profileSessionSetting1523261219384" />
                             <option value="Shop_Assistant_profileSessionSetting1523261178379" />
@@ -956,36 +769,140 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Shop_Assistant_profilePasswordPolicy1522999032717" />
-                            <option value="Manager_profilePasswordPolicy1522999130691" />
-                            <option value="Shop_Assistant_profilePasswordPolicy1523261178275" />
-                            <option value="Shops_Manager_profilePasswordPolicy1523261199724" />
+                            <option value="SMS_Supply__c.Required_Dates" />
+                            <option value="SMS_Supply__c.Date_Validator" />
+                            <option value="SMS_Shop__c.Polish_Prefix" />
                           </set>
                         </option>
-                        <option name="name" value="ProfilePasswordPolicy" />
+                        <option name="name" value="ValidationRule" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="Order" />
-                            <option value="Account" />
-                            <option value="Task" />
-                            <option value="SMS_Supply__c" />
-                            <option value="SMS_Shop__c" />
-                            <option value="Case" />
-                            <option value="Contact" />
-                            <option value="SMS_Wholesale__c" />
-                            <option value="ContentDocument" />
-                            <option value="Campaign" />
-                            <option value="Opportunity" />
-                            <option value="Lead" />
-                            <option value="Asset" />
-                            <option value="Event" />
-                            <option value="Contract" />
-                            <option value="Solution" />
+                            <option value="DirectorDirectSales" />
+                            <option value="SVPSalesMarketing" />
+                            <option value="COO" />
+                            <option value="MarketingTeam" />
+                            <option value="DirectorChannelSales" />
+                            <option value="InstallationRepairServices" />
+                            <option value="SVPHumanResources" />
+                            <option value="SVPCustomerServiceSupport" />
+                            <option value="VPInternationalSales" />
+                            <option value="EasternSalesTeam" />
+                            <option value="CEO" />
+                            <option value="ChannelSalesTeam" />
+                            <option value="CustomerSupportInternational" />
+                            <option value="CFO" />
+                            <option value="WesternSalesTeam" />
+                            <option value="CustomerSupportNorthAmerica" />
+                            <option value="VPMarketing" />
+                            <option value="VPNorthAmericanSales" />
                           </set>
                         </option>
-                        <option name="name" value="TopicsForObjects" />
+                        <option name="name" value="Role" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SMS_Shop__c.Set Anniversary" />
+                            <option value="SMS_Shop__c.Anniversary email" />
+                          </set>
+                        </option>
+                        <option name="name" value="WorkflowRule" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Shop_Assistant" />
+                            <option value="Shop_Assistant_Manager_Import" />
+                          </set>
+                        </option>
+                        <option name="name" value="PermissionSet" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="sf_chttr_apps" />
+                            <option value="sf_com_apps" />
+                          </set>
+                        </option>
+                        <option name="name" value="InstalledPackage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SMS_WholesaleViewController" />
+                            <option value="SMS_ShopsRandomPublicController" />
+                            <option value="SiteLoginControllerTest" />
+                            <option value="SMS_ShopViewController" />
+                            <option value="testpagincontroller" />
+                            <option value="SMS_ShopsImportCSVController" />
+                            <option value="SiteRegisterControllerTest" />
+                            <option value="ForgotPasswordControllerTest" />
+                            <option value="MyProfilePageController" />
+                            <option value="SMS_ShopSearchController" />
+                            <option value="SMS_PopUpWindow" />
+                            <option value="SMS_ShopCSVWrapper" />
+                            <option value="SMS_ShopRestWebService" />
+                            <option value="ChangePasswordControllerTest" />
+                            <option value="SMS_ShopSearchingController" />
+                            <option value="MyProfilePageControllerTest" />
+                            <option value="SMS_ShopEditController" />
+                            <option value="SMS_ShopSOAPWebService" />
+                            <option value="ForgotPasswordController" />
+                            <option value="SMS_ShopViewUtils" />
+                            <option value="SMS_ShopImportCSVWrapper" />
+                            <option value="SMS_ShopPagination" />
+                            <option value="buforController" />
+                            <option value="SMS_Util" />
+                            <option value="SiteLoginController" />
+                            <option value="SiteRegisterController" />
+                            <option value="SMS_WholesaleSOAPWebService" />
+                            <option value="ChangePasswordController" />
+                            <option value="SMS_ShopSearchUtils" />
+                            <option value="SMS_RandomShopsController" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexClass" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SMS_Shop__c.Sends_email_with_anniversary_info" />
+                          </set>
+                        </option>
+                        <option name="name" value="WorkflowAlert" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
+                            <option value="unfiled$public/SupportSelfServiceResetPassword" />
+                            <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
+                            <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
+                            <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
+                            <option value="unfiled$public/SupportCaseAssignmentNotification" />
+                            <option value="unfiled$public/SupportCaseResponse" />
+                            <option value="unfiled$public/SalesNewCustomerEmail" />
+                            <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
+                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
+                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
+                            <option value="unfiled$public/VF_Anniversary_Alert" />
+                            <option value="unfiled$public/Anniversary_Alert" />
+                            <option value="unfiled$public/MarketingProductInquiryResponse" />
+                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
+                          </set>
+                        </option>
+                        <option name="name" value="EmailTemplate" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Lead" />
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="AssignmentRules" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1022,6 +939,7 @@
                             <option value="standard-Sites" />
                             <option value="standard-ContentSearch" />
                             <option value="standard-Lead" />
+                            <option value="Shop_Import" />
                             <option value="standard-ContentContribute" />
                             <option value="standard-ProfilePlatformOverview" />
                             <option value="standard-report" />
@@ -1040,15 +958,379 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="SMS_ShopEdit" />
+                            <option value="Country" />
+                          </set>
+                        </option>
+                        <option name="name" value="GlobalValueSet" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Custom%3A Support Profile" />
+                            <option value="Customer Community Plus Login User" />
+                            <option value="High Volume Customer Portal User" />
+                            <option value="Analytics Cloud Integration User" />
+                            <option value="Cross Org Data Proxy User" />
+                            <option value="Force%2Ecom - Free User" />
+                            <option value="PlatformPortal" />
+                            <option value="External Identity User" />
+                            <option value="Force%2Ecom - App Subscription User" />
+                            <option value="Standard" />
+                            <option value="Chatter External User" />
+                            <option value="Manager" />
+                            <option value="Identity User" />
+                            <option value="Custom%3A Sales Profile" />
+                            <option value="Partner Community Login User" />
+                            <option value="ContractManager" />
+                            <option value="Customer Community Plus User" />
+                            <option value="Partner Community User" />
+                            <option value="Shops Profile" />
+                            <option value="StandardAul" />
+                            <option value="Chatter Moderator User" />
+                            <option value="Gold Partner User" />
+                            <option value="ReadOnly" />
+                            <option value="SolutionManager" />
+                            <option value="Chatter Free User" />
+                            <option value="Shop Assistant" />
+                            <option value="Guest" />
+                            <option value="HighVolumePortal" />
+                            <option value="Customer Community Login User" />
+                            <option value="Customer Portal Manager Standard" />
+                            <option value="MarketingProfile" />
+                            <option value="Analytics Cloud Security User" />
+                            <option value="Admin" />
+                            <option value="Partner App Subscription User" />
+                            <option value="Silver Partner User" />
+                            <option value="Work%2Ecom Only User" />
+                            <option value="Authenticated Website" />
+                            <option value="Customer Community User" />
+                            <option value="Custom%3A Marketing Profile" />
+                            <option value="Customer Portal Manager Custom" />
+                          </set>
+                        </option>
+                        <option name="name" value="Profile" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="standard__Sales" />
+                            <option value="standard__LightningService" />
+                            <option value="standard__ServiceConsole" />
+                            <option value="Shop_Management_System" />
+                            <option value="standard__Community" />
+                            <option value="standard__AppLauncher" />
+                            <option value="standard__Chatter" />
+                            <option value="standard__Platform" />
+                            <option value="standard__Service" />
+                            <option value="standard__LightningSales" />
+                            <option value="standard__Sites" />
+                            <option value="standard__Marketing" />
+                            <option value="standard__Content" />
+                            <option value="standard__LightningSalesConsole" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomApplication" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Metric.Progress" />
+                            <option value="Metric.Completion" />
+                          </set>
+                        </option>
+                        <option name="name" value="RecordType" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="SMSShopTrigger" />
+                          </set>
+                        </option>
+                        <option name="name" value="ApexTrigger" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="New" />
+                          </set>
+                        </option>
+                        <option name="name" value="HomePageComponent" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="DataCloudGeoLocation" />
+                          </set>
+                        </option>
+                        <option name="name" value="CleanDataService" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="New_Shop" />
+                            <option value="New_Wholesale" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomPageWebLink" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Salesforce1" />
+                            <option value="AppSwitcher" />
+                          </set>
+                        </option>
+                        <option name="name" value="AppMenu" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="DE Default" />
+                          </set>
+                        </option>
+                        <option name="name" value="HomePageLayout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Order" />
+                            <option value="Account" />
+                            <option value="Task" />
+                            <option value="SMS_Supply__c" />
+                            <option value="SMS_Shop__c" />
+                            <option value="Contact" />
+                            <option value="Case" />
+                            <option value="SMS_Wholesale__c" />
+                            <option value="ContentDocument" />
+                            <option value="Campaign" />
+                            <option value="Opportunity" />
+                            <option value="Lead" />
+                            <option value="Asset" />
+                            <option value="Event" />
+                            <option value="Contract" />
+                            <option value="Solution" />
+                          </set>
+                        </option>
+                        <option name="name" value="TopicsForObjects" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="jQUery_Migrate" />
+                            <option value="iEditFixed" />
+                            <option value="jQuery_UI" />
+                            <option value="jQuery" />
+                            <option value="SMS_Logo" />
+                            <option value="loader" />
+                            <option value="SMS_View" />
+                            <option value="SiteSamples" />
+                            <option value="iEditVF" />
+                          </set>
+                        </option>
+                        <option name="name" value="StaticResource" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Shops_Profile_profilePasswordPolicy1523546055770" />
+                            <option value="Shop_Assistant_profilePasswordPolicy1522999032717" />
+                            <option value="Manager_profilePasswordPolicy1522999130691" />
+                            <option value="Shop_Assistant_profilePasswordPolicy1523261178275" />
+                            <option value="Shops_Manager_profilePasswordPolicy1523261199724" />
+                          </set>
+                        </option>
+                        <option name="name" value="ProfilePasswordPolicy" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Opportunity.DeliveryStatus" />
+                            <option value="Campaign.ViewCampaignInfluenceReport" />
+                            <option value="Case.UpsellCrosssellOpportunity" />
+                            <option value="Account.Billing" />
+                          </set>
+                        </option>
+                        <option name="name" value="WebLink" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="ChangePassword" />
+                            <option value="SiteTemplate" />
                             <option value="SMS_ShopSearch" />
-                            <option value="Test" />
+                            <option value="InMaintenance" />
+                            <option value="StdExceptionTemplate" />
+                            <option value="SMS_ShopCSVDownload" />
+                            <option value="SiteRegister" />
+                            <option value="AnswersHome" />
+                            <option value="SMS_ShopEdit" />
+                            <option value="SiteLogin" />
                             <option value="SMS_WholesaleEdit" />
+                            <option value="Unauthorized" />
+                            <option value="SiteRegisterConfirm" />
+                            <option value="SMS_ShopsImportCSV" />
+                            <option value="UnderConstruction" />
+                            <option value="SMS_ShopsRandomPublic" />
+                            <option value="FileNotFound" />
+                            <option value="ForgotPassword" />
+                            <option value="Exception" />
+                            <option value="SMS_ShopSearchXLSDownload" />
+                            <option value="SMS_ShopSearchCSVDownload" />
+                            <option value="IdeasHome" />
+                            <option value="BandwidthExceeded" />
+                            <option value="ForgotPasswordConfirm" />
+                            <option value="MyProfilePage" />
                             <option value="SMS_ShopView" />
+                            <option value="SMS_ShopSearchXLS" />
                             <option value="SMS_WholesaleView" />
                           </set>
                         </option>
                         <option name="name" value="ApexPage" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case" />
+                          </set>
+                        </option>
+                        <option name="name" value="EscalationRules" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Shops" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomSite" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="ApexDevNet" />
+                          </set>
+                        </option>
+                        <option name="name" value="RemoteSiteSetting" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Account-Account %28Sales%29 Layout" />
+                            <option value="Contact-Contact %28Support%29 Layout" />
+                            <option value="Product2-Product Layout" />
+                            <option value="Lead-Lead Layout" />
+                            <option value="Contact-Contact Layout" />
+                            <option value="Case-Case %28Sales%29 Layout" />
+                            <option value="Lead-Lead %28Support%29 Layout" />
+                            <option value="DandBCompany-D%26B Company Layout" />
+                            <option value="Case-Case %28Support%29 Layout" />
+                            <option value="AssetRelationship-Asset Relationship Layout" />
+                            <option value="Macro-Macro Layout" />
+                            <option value="Order-Order Layout" />
+                            <option value="UserProvisioningRequest-User Provisioning Request Layout" />
+                            <option value="Solution-Solution Layout" />
+                            <option value="ScorecardMetric-Scorecard Metric Layout" />
+                            <option value="Pricebook2-Price Book Layout" />
+                            <option value="Event-Event Layout" />
+                            <option value="UserProvisioningLog-User Provisioning Log Layout" />
+                            <option value="UserProvAccount-User Provisioning Account Layout" />
+                            <option value="Contact-Contact %28Marketing%29 Layout" />
+                            <option value="Task-Task Layout" />
+                            <option value="SMS_Supply__c-Supply Layout" />
+                            <option value="Opportunity-Opportunity Layout" />
+                            <option value="Asset-Asset Layout" />
+                            <option value="OrderItem-Order Product Layout" />
+                            <option value="DuplicateRecordSet-Duplicate Record Set Layout" />
+                            <option value="SMS_Shop__c-Shop Layout" />
+                            <option value="OpportunityLineItem-Opportunity Product Layout" />
+                            <option value="SMS_Supply__c-Wholesale Layout" />
+                            <option value="Case-Case Layout" />
+                            <option value="Contract-Contract Layout" />
+                            <option value="Account-Account Layout" />
+                            <option value="Campaign-Campaign Layout" />
+                            <option value="ScorecardAssociation-Scorecard Association Layout" />
+                            <option value="Opportunity-Opportunity %28Sales%29 Layout" />
+                            <option value="SocialPersona-Social Persona Layout" />
+                            <option value="Scorecard-Scorecard Layout" />
+                            <option value="Case-Case %28Marketing%29 Layout" />
+                            <option value="PricebookEntry-Price Book Entry Layout" />
+                            <option value="CaseClose-Close Case Layout" />
+                            <option value="Idea-Idea Layout" />
+                            <option value="SMS_Shop__c-ShopEdit" />
+                            <option value="ContentVersion-Content Version Layout" />
+                            <option value="Opportunity-Opportunity %28Support%29 Layout" />
+                            <option value="Global-Global Layout" />
+                            <option value="Lead-Lead %28Sales%29 Layout" />
+                            <option value="Account-Account %28Marketing%29 Layout" />
+                            <option value="EmailMessage-Email Message Layout" />
+                            <option value="SocialPost-Social Post Layout" />
+                            <option value="Account-Account %28Support%29 Layout" />
+                            <option value="CampaignMember-Campaign Member Page Layout" />
+                            <option value="QuickText-Quick Text Layout" />
+                            <option value="User-User Layout" />
+                            <option value="Contact-Contact %28Sales%29 Layout" />
+                            <option value="Lead-Lead %28Marketing%29 Layout" />
+                            <option value="SMS_Wholesale__c-Wholesale Layout" />
+                            <option value="Opportunity-Opportunity %28Marketing%29 Layout" />
+                          </set>
+                        </option>
+                        <option name="name" value="Layout" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Case.SLAViolation__c" />
+                            <option value="SMS_Trigger_Exceptions__c.SMSShopTrigger__c" />
+                            <option value="Lead.Primary__c" />
+                            <option value="SMS_Shop__c.Cash_Desk_no__c" />
+                            <option value="Lead.CurrentGenerators__c" />
+                            <option value="Account.NumberofLocations__c" />
+                            <option value="Opportunity.MainCompetitors__c" />
+                            <option value="Account.SLASerialNumber__c" />
+                            <option value="Account.UpsellOpportunity__c" />
+                            <option value="SMS_Wholesale__c.City__c" />
+                            <option value="SMS_Shop__c.Size_of_Shop__c" />
+                            <option value="Account.CustomerPriority__c" />
+                            <option value="SMS_Wholesale__c.Phone__c" />
+                            <option value="Opportunity.OrderNumber__c" />
+                            <option value="Metric.OrigMetricId__c" />
+                            <option value="Case.EngineeringReqNumber__c" />
+                            <option value="Account.SLAExpirationDate__c" />
+                            <option value="SMS_Shop__c.House_Number__c" />
+                            <option value="SMS_Wholesale__c.Street__c" />
+                            <option value="SMS_Wholesale__c.Country__c" />
+                            <option value="Case.PotentialLiability__c" />
+                            <option value="SMS_Wholesale__c.Website__c" />
+                            <option value="SMS_Shop__c.Next_Anniversary__c" />
+                            <option value="User.Country__c" />
+                            <option value="SMS_Shop__c.Email__c" />
+                            <option value="Opportunity.TrackingNumber__c" />
+                            <option value="Account.Active__c" />
+                            <option value="SMS_Wholesale__c.Email__c" />
+                            <option value="SMS_Shop__c.LicenseNo__c" />
+                            <option value="SMS_Shop__c.Street__c" />
+                            <option value="Opportunity.DeliveryInstallationStatus__c" />
+                            <option value="Contact.Level__c" />
+                            <option value="SMS_Wholesale__c.House_Number__c" />
+                            <option value="SMS_Supply__c.Contract_Start_Date__c" />
+                            <option value="Goal.OrigGoalId__c" />
+                            <option value="SMS_Supply__c.Contract_End_Date__c" />
+                            <option value="SMS_Supply__c.Wholesale__c" />
+                            <option value="Account.SLA__c" />
+                            <option value="Lead.SICCode__c" />
+                            <option value="SMS_Shop__c.Phone__c" />
+                            <option value="Contact.Languages__c" />
+                            <option value="SMS_Setting__c.value__c" />
+                            <option value="SMS_Supply__c.Shop__c" />
+                            <option value="Opportunity.CurrentGenerators__c" />
+                            <option value="SMS_Shop__c.Previous_Name__c" />
+                            <option value="SMS_Shop__c.Country__c" />
+                            <option value="Lead.ProductInterest__c" />
+                            <option value="Lead.NumberofLocations__c" />
+                            <option value="Case.Product__c" />
+                            <option value="SMS_Shop__c.City__c" />
+                          </set>
+                        </option>
+                        <option name="name" value="CustomField" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
@@ -1115,40 +1397,46 @@
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="unfiled$public" />
+                            <option value="SMS_Setting__c-en_US" />
+                            <option value="SMS_Shop__c-en_US" />
+                            <option value="SMS_Wholesale__c-en_US" />
+                            <option value="SMS_Trigger_Exceptions__c-en_US" />
+                            <option value="SMS_Supply__c-en_US" />
                           </set>
                         </option>
-                        <option name="name" value="EmailFolder" />
+                        <option name="name" value="CustomObjectTranslation" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="unfiled$public" />
+                            <option value="SMS_Shop__c.SMS_Duplicated_shop_matching_rule" />
+                            <option value="Contact.Standard_Contact_Match_Rule_v1_1" />
+                            <option value="Account.Standard_Account_Match_Rule_v1_0" />
+                            <option value="Lead.Standard_Lead_Match_Rule_v1_0" />
+                            <option value="SMS_Shop__c.SMS_Duplicate_shop_matching_rule" />
                           </set>
                         </option>
-                        <option name="name" value="ReportFolder" />
+                        <option name="name" value="MatchingRule" />
                       </MetadataType>
                       <MetadataType>
                         <option name="members">
                           <set>
-                            <option value="unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE" />
-                            <option value="unfiled$public/SupportSelfServiceResetPassword" />
-                            <option value="unfiled$public/SupportCaseCreatedPhoneInquiries" />
-                            <option value="unfiled$public/SupportSelfServiceNewLoginandPassword" />
-                            <option value="unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE" />
-                            <option value="unfiled$public/SupportCaseAssignmentNotification" />
-                            <option value="unfiled$public/SupportCaseResponse" />
-                            <option value="unfiled$public/SalesNewCustomerEmail" />
-                            <option value="unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE" />
-                            <option value="unfiled$public/SupportEscalatedCaseNotification" />
-                            <option value="unfiled$public/SupportCaseCreatedWebInquiries" />
-                            <option value="unfiled$public/VF_Anniversary_Alert" />
-                            <option value="unfiled$public/Anniversary_Alert" />
-                            <option value="unfiled$public/MarketingProductInquiryResponse" />
-                            <option value="unfiled$public/SupportEscalatedCaseReassignment" />
+                            <option value="SiteFooter" />
+                            <option value="SMS_loadIcon" />
+                            <option value="SiteLogin" />
+                            <option value="SitePoweredBy" />
+                            <option value="SiteHeader" />
                           </set>
                         </option>
-                        <option name="name" value="EmailTemplate" />
+                        <option name="name" value="ApexComponent" />
+                      </MetadataType>
+                      <MetadataType>
+                        <option name="members">
+                          <set>
+                            <option value="Internal Zone" />
+                          </set>
+                        </option>
+                        <option name="name" value="Community" />
                       </MetadataType>
                     </set>
                   </option>
@@ -1160,18 +1448,20 @@
         <option name="retrieveAndMergeDefault" value="false" />
         <option name="soqlQuerySettings">
           <SoqlQuerySettings>
-            <option name="documentText" value="SELECT Id, Previous_Name__C, Email__c, Country__C FROM SMS_Shop__c WHERE Previous_Name__c LIKE 'test%'" />
+            <option name="documentText" value="SMS_Util.getToken()" />
+            <option name="resultsSplitterProportion" value="0.4483568" />
+            <option name="splitterProportion" value="0.53656596" />
           </SoqlQuerySettings>
         </option>
       </ProjectWorkspaceSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1864" />
-    <option name="y" value="-27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1030" />
+    <option name="x" value="-1927" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
   </component>
@@ -1180,9 +1470,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1223,11 +1511,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/BRITENET/IdeaProjects/Developer Org/src/classes/SMS_ShopViewController.cls" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Playground 2 curious moose1" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1306,29 +1597,29 @@
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Illuminated Cloud" order="15" weight="0.33442265" />
+      <window_info anchor="bottom" id="Illuminated Cloud" order="13" weight="0.33333334" />
       <window_info anchor="right" id="Palette" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.32684565" side_tool="true" weight="0.36752138" />
-      <window_info active="true" anchor="bottom" id="Anonymous Apex" order="10" sideWeight="0.67315435" visible="true" weight="0.1906318" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.32942432" side_tool="true" weight="0.23638344" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="8" sideWeight="0.6705757" weight="1.0" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
-      <window_info anchor="bottom" id="SOQL Query" order="13" weight="0.074074075" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19509594" />
+      <window_info anchor="bottom" id="SOQL Query" order="11" sideWeight="0.78411514" weight="0.36056644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Log Viewer" order="7" weight="0.37254903" />
+      <window_info anchor="right" id="Log Viewer" order="8" weight="0.20788912" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1336,8 +1627,41 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32905984" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32905984" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Log Viewer" order="8" visible="true" weight="0.20788912" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32905984" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="14" sideWeight="0.32942432" side_tool="true" visible="true" weight="0.23638344" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="8" sideWeight="0.6705757" weight="1.0" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Illuminated Cloud" order="13" weight="0.33333334" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19509594" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="SOQL Query" order="11" sideWeight="0.78411514" weight="0.36056644" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1347,261 +1671,282 @@
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-          <folding>
-            <element signature="n#style#0;n#apex:image#0;n#apex:facet#0;n#apex:actionStatus#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_PopUpWindow.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/triggers/SuppliesTrigger.trigger" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/staticresources/SMS_View.resource">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/triggers/SuppliesTrigger.trigger" />
-    <entry file="file://$PROJECT_DIR$/src/triggers/SupplyTrigger.trigger" />
-    <entry file="file://$PROJECT_DIR$/src/triggers/SMS_SupplyTrigger.trigger">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_PopUpWindow.cls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleView.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearch.cls" />
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopCountryPicklist.cls" />
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/IlluminatedCloud2/lib/IlluminatedCloud.jar!/xsd/visualforce/apex.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="1475" column="4" selection-start-line="1475" selection-start-column="4" selection-end-line="1475" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/testMap.page" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls" />
+    <entry file="file://$PROJECT_DIR$/src/classes/testPagin.cls" />
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleEdit.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/testpagincontroller.cls" />
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearching.page" />
+    <entry file="file://$PROJECT_DIR$/src/pages/testpagin.page" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchingController.cls" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_PopUpWindow.cls" />
+    <entry file="file://$PROJECT_DIR$/src/pages/bufor.page" />
+    <entry file="file://$PROJECT_DIR$/src/components/SMS_loadIcon.component">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopCSVWrapper.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="456">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopCSVDownload.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="68">
+          <caret line="4" column="153" selection-start-line="4" selection-start-column="153" selection-end-line="4" selection-end-column="153" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
+    <entry file="file://$PROJECT_DIR$/src/classes/SMSShopTriggerUtil.cls" />
+    <entry file="file://$PROJECT_DIR$/src/triggers/SMS_ShopTrigger.trigger" />
+    <entry file="file://$PROJECT_DIR$/src/triggers/SMS_SupplyTrigger.trigger" />
+    <entry file="file://$PROJECT_DIR$/src/classes/buforController.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/triggers/SMSShopTrigger.trigger">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopsImportCSV.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearchXLS.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopEdit.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopSearch.page">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="80" lean-forward="true" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
-          <folding>
-            <element signature="n#style#0;n#apex:image#0;n#apex:facet#0;n#apex:actionStatus#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1122">
+          <caret line="66" column="12" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopsImportCSVController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopImportCSVWrapper.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/IlluminatedCloud/Developer_Org/OfflineSymbolTable.zip!/SMS_Supply__c.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopViewController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="86" column="15" lean-forward="true" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopViewUtils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="9" selection-start-line="14" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopEditController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopsExternal.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesaleSOAPWebService.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopsExternalControllerTest.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSOAPWebService.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopsRandomPublicController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopRestWebService.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" lean-forward="true" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchController.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" selection-start-line="13" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="36" column="12" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="36" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopSearchUtils.cls">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopsExternalController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopMessaging.cls">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopCallout.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/SMS_ShopPagination.cls">
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopsExternal.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="76" column="12" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopView.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3791">
+          <caret line="223" column="57" lean-forward="true" selection-start-line="223" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesaleRestWebService.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_ShopsRandomPublic.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesaleViewController.cls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesaleView.page">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="144" column="102" lean-forward="true" selection-start-line="144" selection-start-column="102" selection-end-line="144" selection-end-column="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/testPagin.page">
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_Util.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#apex:outputPanel#0;n#apex:panelGrid#0;n#apex:pageBlock#0;n#apex:form#0;n#apex:page#0;n#apex:page#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="215" column="48" lean-forward="true" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/testPagin.cls">
+    <entry file="file://$PROJECT_DIR$/src/classes/SMS_WholesalesExternalController.cls">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="689">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/SMS_WholesalesExternal.page">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="129" column="130" selection-start-line="129" selection-start-column="130" selection-end-line="129" selection-end-column="130" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#0;n#fieldset#0;n#div#0;n#apex:form#0;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#apex:outputPanel#0;n#apex:form#1;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#apex:repeat#0;n#tbody#0;n#table#0;n#apex:outputPanel#0;n#apex:form#1;n#apex:pageBlock#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#apex:form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#apex:form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#apex:page#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

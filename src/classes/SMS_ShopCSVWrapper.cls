@@ -25,18 +25,18 @@ public with sharing class SMS_ShopCSVWrapper {
         String csvLine = line(new String[]{
                 format('Previous Name'),
                 format('Email'),
+                format('City'),
                 format('Country')
         });
         for (SMS_Shop__c shop : smsShops) {
             csvLine += line(new String[]{
                     format(shop.Previous_Name__c),
                     format(shop.Email__c),
+                    format(shop.City__c),
                     format(shop.Country__c)
             });
         }
 
         return csvLine;
     }
-
-
 }

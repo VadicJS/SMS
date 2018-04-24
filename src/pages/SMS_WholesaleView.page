@@ -2,25 +2,48 @@
  - Created by BRITENET on 09.04.2018.
  -->
 
-<apex:page id="wholesaleview" standardController="SMS_Wholesale__c" extensions="SMS_PopUpWindow">
-    <apex:stylesheet value="{!$Resource.SMS_View}" />
+<apex:page id="wholesaleview" standardController="SMS_Wholesale__c" extensions="SMS_WholesaleViewController">
+    <apex:includeScript
+            value="https://maps.googleapis.com/maps/api/js?key=AIzaSyCheV7GAMG6lKeG3GyKFyLg0Q9BUwjV8Zk&callback"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQuery)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQUery_Migrate)}"/>
+    <apex:includeScript
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js')}"/>
+    <apex:stylesheet
+            value="{!URLFOR($Resource.jQuery_UI, '/jquery-ui-1.9.2.custom/css/base/jquery-ui-1.9.2.custom.css')}"/>
+    <apex:stylesheet value="{!$Resource.SMS_View}"/>
+    <style>
+        [id*=map] {
+         font-family: Arial;
+         font-size:12px;
+         line-height:normal !important;
+         height:500px;
+         background:transparent;
+        }
+        .datePicker{
+            z-index:10001;
+            width: 420px;
+            height:auto;
+        }
+
+    </style>
     <apex:pageBlock id="wholesaleBlock" title="{!SMS_Wholesale__c.Name}">
-        <apex:pageMessages />
+        <apex:pageMessages id="messages"/>
         <apex:form id="wholesaleForm">
             <apex:pageBlockSection id="bInfo" title="Basic Info" columns="2">
-                <apex:pageBlockSectionItem >
+                <apex:pageBlockSectionItem>
                     <apex:outputLabel value="Name"/>
                     <apex:outputField value="{!SMS_Wholesale__c.Name}"/>
                 </apex:pageBlockSectionItem>
                 <apex:outputField value="{!SMS_Wholesale__c.Email__c}"/>
-                <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem/>
                 <apex:outputField value="{!SMS_Wholesale__c.Phone__c}"/>
             </apex:pageBlockSection>
             <apex:pageBlockSection title="Address" id="address" columns="2">
-                <apex:outputField value="{!SMS_Wholesale__c.Country__c}"/>
-                <apex:outputField value="{!SMS_Wholesale__c.City__c}"/>
-                <apex:outputField value="{!SMS_Wholesale__c.Street__c}"/>
-                <apex:outputField value="{!SMS_Wholesale__c.House_Number__c}"/>
+                <apex:outputField id="country" value="{!SMS_Wholesale__c.Country__c}"/>
+                <apex:outputField id="city" value="{!SMS_Wholesale__c.City__c}"/>
+                <apex:outputField id="street" value="{!SMS_Wholesale__c.Street__c}"/>
+                <apex:outputField id="houseNumber" value="{!SMS_Wholesale__c.House_Number__c}"/>
             </apex:pageBlockSection>
 
             <apex:outputPanel id="PopUpWindow">
@@ -29,21 +52,209 @@
                     <span>Do you really want to <b>delete</b> this wholesale?</span>
                     <div id="popupButtons" styleClass="popupButtons">
                         <apex:commandButton styleClass="popupbtn" value="{!$Label.Accept}" action="{!delete}"/>
-                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}" action="{!closePopup}" rerender="PopUpWindow"/>
+                        <apex:commandButton styleClass="popupbtn" value="{!$Label.Not_Accept}" action="{!closePopup}"
+                                            rerender="PopUpWindow"/>
                     </div>
                 </apex:outputPanel>
             </apex:outputPanel>
         </apex:form>
         <apex:pageBlockSection id="relatedLists" columns="2">
-            <apex:relatedList list="Supplies__r"/>
+            <apex:relatedList list="Supplies__r" id="relList"/>
             <apex:relatedList subject="{!SMS_Wholesale__c}" list="Histories"/>
         </apex:pageBlockSection>
-        <apex:form >
+        <apex:form>
             <div id="button-group" align="center">
                 <apex:commandButton value="{!$Label.Edit}" action="{!edit}"/>
+                <apex:commandButton value="{!$label.Add_Contract}" id="addContractButton" action="{!clear}" reRender="searchForm, pb, newSuppliesList"/>
                 <apex:commandButton value="{!$Label.Delete}" action="{!showPopup}" rerender="PopUpWindow"/>
             </div>
         </apex:form>
+        <apex:pageBlockSection columns="1" title="{!$Label.Wholesale_Map}">
+
+            <div id="map"></div>
+        </apex:pageBlockSection>
+        <div id="addContractsPopup">
+            <c:SMS_loadIcon/>
+            <apex:form style="overflow-y:auto;overflow-x:auto;margin-right: 5px;margin-left: 5px;margin-top: 3px;"
+                       id="searchForm">
+                <apex:pageMessages id="addShopsMessages"/>
+                <apex:pageBlock id="pb">
+                    <apex:pageBlockSection id="formSection" title="{!$Label.Search_Form}" columns="2">
+                        <apex:inputField value="{!smsShop.Previous_Name__c}"/>
+                        <apex:inputField value="{!smsShop.City__c}"/>
+                        <apex:inputField value="{!smsShop.Email__c}"/>
+                        <apex:inputField value="{!smsShop.Country__c}" required="true"/>
+                    </apex:pageBlockSection>
+                    <div id="buttons" align="center">
+                        <apex:commandButton value="{!$Label.Search}" action="{!search}" reRender="searchForm"
+                                            status="loading"/>
+                        <apex:commandButton value="{!$Label.Clear} " reRender="searchForm" action="{!clearForm}"
+                                            status="loading"/>
+                    </div>
+                    <apex:pageBlockSection title="{!$Label.Results}" rendered="{!showResult}" id="searchSection"
+                                           columns="1">
+                        <apex:pageblockTable value="{!ContractsFromSearch}" var="con" id="tabId" style="padding: 0px;">
+                            <apex:column headerValue="{!$Label.Action}">
+                                <apex:commandLink value="{!$Label.Select}" action="{!selectShop}"
+                                                  reRender="dateEditor, newSuppliesList, searchSection, dateEditor, comBts">
+                                    <apex:param name="selectedShopId" value="{!con.smsShopWrapped.Id}"/>
+                                </apex:commandLink>
+                            </apex:column>
+                            <apex:column headerValue="{!$Label.Original_Name}">
+                                <apex:outputField value="{!con.smsShopWrapped.Previous_Name__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="{!$Label.Email}">
+                                <apex:outputField value="{!con.smsShopWrapped.Email__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="{!$Label.Country}">
+                                <apex:outputField value="{!con.smsShopWrapped.Country__c}"/>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    <apex:outputText value="{!$Label.No_results}" rendered="{!notFound}"/>
+                    <apex:pageBlockSection id="newSuppliesList" title="New Supplies" columns="1">
+                        <apex:pageBlockTable value="{!contractsToAdd}" var="newSupply" rendered="{!showNewSupplies}"
+                                             id="supplyTable">
+                            <apex:column headerValue="{!$Label.Action}">
+                                <apex:commandLink value="{!$Label.Remove}" action="{!remove}"
+                                                  reRender="newSuppliesList, searchSection, tabId, pb, dateEditor, comBts">
+                                    <apex:param name="removedShopId" value="{!newSupply.smsShopWrapped.Id}"/>
+                                </apex:commandLink>
+                                </apex:column>
+                            <apex:column headerValue="{!$Label.Original_Name}"
+                                         value="{!newSupply.smsShopWrapped.Previous_Name__c}"/>
+                            <apex:column headerValue="{!$Label.Email}" value="{!newSupply.smsShopWrapped.Email__c}"/>
+                            <apex:column headerValue="{!$Label.City}" value="{!newSupply.smsShopWrapped.City__c}"/>
+                            <apex:column headerValue="{!$Label.Country}"
+                                         value="{!newSupply.smsShopWrapped.Country__c}"/>
+                            <apex:column headerValue="{!$Label.Contract_Start_Date}">
+                                <apex:inputField value="{!newSupply.smsSupplyWrapped.Contract_Start_Date__c}"
+                                                 rendered="{!!datesEnabled}">
+                                    <apex:actionSupport action="{!datesChange}" event="onchange" rerender="none"/>
+                                </apex:inputField>
+                                <apex:inputField value="{!newSupply.smsSupplyWrapped.Contract_Start_Date__c}"
+                                                 id="conStDate" rendered="{!datesEnabled}" html-disabled="true">
+                                    <apex:actionSupport action="{!datesChange}" event="onchange" rerender="none"/>
+                                </apex:inputField>
+                            </apex:column>
+                            <apex:column headerValue="{!$Label.Contract_End_Date}">
+                                <apex:inputField value="{!newSupply.smsSupplyWrapped.Contract_End_Date__c}"
+                                                 rendered="{!!datesEnabled}">
+                                <apex:actionSupport action="{!datesChange}" event="onchange" rerender="none"/>
+                                </apex:inputField>
+                                <apex:param name="supDateId" value="{!newSupply.smsShopWrapped.Id}" />
+                                <apex:inputField value="{!newSupply.smsSupplyWrapped.Contract_End_Date__c}"
+                                                 id="conEndDate" rendered="{!datesEnabled}" html-disabled="true">
+                                    <apex:actionSupport action="{!datesChange}" event="onchange" rerender="none"/>
+                                </apex:inputField>
+                            </apex:column>
+                            <apex:column headerValue="{!$Label.Status}" value="{!newSupply.importStatus}" styleClass="status"/>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    <apex:panelGrid columns="6" id="comBts">
+                    <apex:commandButton action="{!insertContracts}" value="{!$Label.Save}"
+                                        onComplete="closeDialog({!success});return false;" id="saveBtn"  reRender="addShopsMessages, newSuppliesList, relList,messages, pb" rendered="{!showNewSupplies}"/>
+                    <apex:commandButton action="{!clear}" value="{!$Label.Cancel}" id="cancelBtn" onClick="closeDialog(true)" reRender="newSuppliesList, searchForm"/>
+                        <apex:outputLabel value="{!$Label.Select_dates_for_all}" rendered="{!showNewSupplies}"/>
+                        <apex:inputCheckbox value="{!datesEnabled}" id="datesCheckbox" rendered="{!showNewSupplies}">
+                            <apex:actionSupport event="onclick" reRender="newSuppliesList" onSubmit="switchDates()"/>
+                        </apex:inputCheckbox>
+                        <apex:panelGrid columns="2" rendered="{!showNewSupplies}">
+                        <input type="date" disabled="false" class="oneDateInput" id="inputDateStart"
+                               onchange="setDate(inputDateStart, 'conStDate')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                        <input type="date" disabled="false" class="oneDateInput" id="inputDateEnd"
+                               onchange="setDate(inputDateEnd, 'conEndDate')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                        </apex:panelGrid>
+                    </apex:panelGrid>
+                    <apex:panelGrid columns="4" id="dateEditor" style="float:right;" rendered="{!showNewSupplies}">
+
+                    </apex:panelGrid>
+                </apex:pageBlock>
+            </apex:form>
+        </div>
     </apex:pageBlock>
 
+
+    <script>
+
+    $(document).ready(function(){
+       $("#addContractsPopup").dialog({ autoOpen: false, modal: true, title: '{!$Label.Add_Contracts} {!SMS_Wholesale__c.Name}', width: 1000, height: 400,  position: 'center'  });
+       $('body .bRelatedList .bPageBlock .pbButton input.btn').hide();
+
+     });
+
+     $("[id$='addContractButton']").click(function () {
+         $("#addContractsPopup").dialog("open");
+         $('#addContractsPopup').dialog('option', 'position', 'center');
+         return false;
+     });
+
+     closeDialog = function(param) {
+         if(param)
+         $("#addContractsPopup").dialog("close");
+     };
+     setDate = function(elem, target) {
+       var value = $(elem).val();
+       var date = value.split("-");
+       var dateSlashed = date[2] + '/' + date[1] + '/' + date[0];
+
+       $('[id$='+target+']').val(dateSlashed);
+    };
+
+
+
+   switchDates = function(){
+        $(".oneDateInput").prop('disabled', !$("[id$='datesCheckbox']").is(':checked'));
+    };
+
+
+    $(document).ready(function() {
+        var myOptions = {
+        zoom: 20,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
+        mapTypeControl: true
+        }
+        var map;
+        var marker;
+        var geocoder = new google.maps.Geocoder();
+        var address = '{!SMS_Wholesale__c.Street__c}' + ' ' + '{!SMS_Wholesale__c.House_Number__c}' + ' ' + '{!SMS_Wholesale__c.City__c}' + ' ' + '{!SMS_Wholesale__c.Country__c}';
+        var infowindow = new google.maps.InfoWindow({
+            content: "<b>{!SMS_Wholesale__c.Name}</b>"
+        });
+        geocoder.geocode({ address: address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK && results.length) {
+                if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+                    map = new google.maps.Map(document.getElementById("map"), myOptions);
+                    map.setCenter(results[0].geometry.location);
+                    marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map,
+                        title: "{!SMS_Wholesale__c.Name}"
+                    });
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infowindow.open(map, marker);
+                    });
+                    google.maps.event.addListener(infowindow, 'closeclick', function () {
+                        map.setCenter(marker.getPosition());
+                    });
+                }
+            } else {
+                $('#map').css({ 'height': '15px' });
+                $('#map').html("{!$Label.Address_not_Found}");
+                resizeIframe();
+            }
+        });
+        function resizeIframe() {
+            var me = window.name;
+            if (me) {
+                var iframes = parent.document.getElementsByName(me);
+                if (iframes && iframes.length == 1) {
+                    height = document.body.offsetHeight;
+                    iframes[0].style.height = height + "px";
+                }
+            }
+        }
+    });
+
+    </script>
 </apex:page>

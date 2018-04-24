@@ -5,7 +5,7 @@
 <apex:page id="wholesaleEdit" standardController="SMS_Wholesale__c">
     <apex:form id="wholesaleForm">
         <apex:pageMessages />
-        <apex:pageBlock id="wholesaleBlock" title="{!$Label.Edit} {!SMS_Wholesale__c.Name}">
+        <apex:pageBlock id="wholesaleBlock" title="Wholesale">
             <apex:pageBlockSection id="bInfo" title="{!$Label.Basic_Info}" columns="2">
                 <apex:pageBlockSectionItem >
                     <apex:outputLabel value="{!$Label.Name}"/>

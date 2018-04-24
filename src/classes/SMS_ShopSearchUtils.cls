@@ -1,6 +1,6 @@
 public with sharing class SMS_ShopSearchUtils {
     public static String prepareQuery(SMS_Shop__c smsShop) {
-        String preparedQuery = 'SELECT Id, Previous_Name__C, Email__c, Country__C FROM SMS_Shop__c WHERE Country__c LIKE \'%' + smsShop.Country__c + '%\'';
+        String preparedQuery = 'SELECT Id, Previous_Name__C, Email__c, Country__C, City__c FROM SMS_Shop__c WHERE Country__c LIKE \'%' + smsShop.Country__c + '%\'';
         if (String.isNotBlank(smsShop.Previous_Name__c)) {
             preparedQuery += ' AND Previous_Name__c LIKE \'%' + smsShop.Previous_Name__c + '%\'';
         }
@@ -10,7 +10,7 @@ public with sharing class SMS_ShopSearchUtils {
         if (String.isNotBlank(smsShop.Email__c)) {
             preparedQuery += ' AND Email__c LIKE \'%' + smsShop.Email__c + '%\'';
         }
-        return preparedQuery;
+        return preparedQuery ;
     }
-}
 
+}
